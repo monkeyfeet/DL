@@ -1,0 +1,103 @@
+/**
+ * Typography styles
+ *
+ * All typography formatting and general font settings
+ * belong in this file. For unique blocks and widgets, etc
+ * you should put those in layout.css
+ **/
+ 
+
+body,
+html {
+	font-family: 'Open Sans', serif;
+	/*font-family: 'Droid Serif', serif;*/
+	font-size: 14px;
+	color: $black;
+	
+}
+
+
+/**
+ * Headings
+ **/
+
+h1 {
+	font-size: 2.2rem;
+	line-height: 1em;
+	margin-bottom: 1rem;
+	font-weight: 400;
+	font-family: 'Crimson Text', serif;
+	font-family: 'Droid Serif', serif;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: 2rem;
+	line-height: 1em;
+	margin-bottom: 0.5rem;
+	font-weight: 400;
+	font-family: 'Crimson Text', serif;
+	font-family: 'Droid Serif', serif;
+	font-style: italic;
+}
+
+h3 {
+	font-family: 'Droid Serif', serif;
+	font-size: 1.8rem;
+	padding: 0.5rem 0;
+	font-weight: 400;
+}
+
+h4 {
+	font-family: 'Droid Serif', serif;
+	font-size: 1.4rem;
+	padding: 0.5rem 0;
+	font-weight: 400;
+}
+
+
+
+/**
+ * Body copy
+ **/
+
+.typography {
+	p, li {
+		font-size: 1.2rem;
+		line-height: 1.3em;
+		margin-bottom: 0.7rem;
+	}
+
+	a {
+		@include animate();
+
+		&:not(.button) {
+			text-decoration: none;
+			border-bottom: 1px dotted $red;
+			color: $red;
+
+			&:hover {
+				border-bottom: 1px solid $red;
+			}
+		}
+	}
+
+	ul,
+	ol{
+		padding-left: 24px;
+	}
+}
+
+
+
+/**
+ * Text formatting
+ *
+ * Allows us to add a class (ie .centered-text) to text to apply font styles
+ **/
+
+.centered-text {		text-align: center; }
+.bold-text {			font-weight: bold; }
+.italic-text {			font-style: italic; }
+
+

@@ -1,0 +1,110 @@
+
+/**
+ * General layout
+ **/
+
+main {
+	@include col(2,3,20px)
+}
+
+aside {
+	@include col(1,3,20px)	
+}
+
+.inner {
+	max-width: 950px;
+	margin: 0 auto;
+}
+
+.cf {
+	@include clearfix();
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.clear {
+	clear: both;
+}
+
+.table {	
+	.row {
+		@include clearfix();
+		
+		&.heading {
+			font-weight: bold;
+			border-bottom: 1px solid $light_grey;
+		}
+	}
+}
+
+/**
+ * Page header
+ **/
+
+.page-header {
+	padding: 20px 0;
+	text-align: right;
+
+	.inner {
+		/*max-width: 100%;
+		padding: 0 20px;*/
+	}
+	.logo {
+		width: 130px;
+		float: left;
+		display: block;
+		margin-right: 20px;
+
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+	}
+
+	h1 {
+		font-size: 5rem;
+		
+	}
+
+	h2 {
+		font-size: 3.2rem;
+		margin: 0;
+	}
+}
+
+/**
+ * Page
+ **/
+.page {
+	margin: 20px 0;
+}
+
+.excerpt {
+	border-top: 1px solid $light-grey;
+
+	p {
+		font-family: 'Droid Serif', serif;
+		color: $red;
+		padding-top: 20px;
+		font-size: 1.5rem !important;
+		font-style: italic;
+		text-align: center;
+	}
+}
+ 
+ 
+
+footer {
+
+	&.page-footer {
+		background: $red;
+		color: $white;
+		padding: 20px 0;
+	}
+}

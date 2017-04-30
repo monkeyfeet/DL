@@ -1,0 +1,144 @@
+
+/**
+ * Responsive
+ **/
+@media all and (max-width: 1600px) {
+	
+}
+
+@media all and (max-width: 1000px) {
+	.inner {
+		padding: 0 20px;
+	}
+}
+
+@media all and (max-width: 800px) {
+
+	.page-header {
+
+		.logo {
+			width: 100px;
+		}
+
+		h1 {
+			font-size: 4rem;
+			
+		}
+
+		h2 {
+			font-size: 2.55rem;
+		}
+	}
+
+	section {
+		.row {
+			.col {
+				@include col(1,3)
+			}
+		}
+	}
+
+	section {
+		&.grid {
+			.item {
+				@include grid( $cols: 2, $col_gap: 2%)
+			}
+		}
+	}
+}
+
+@media all and (max-width: 700px) {
+
+	.page-header {
+
+		.logo {
+			width: 75px;
+		}
+
+		h1 {
+			font-size: 3rem;
+			
+		}
+
+		h2 {
+			font-size: 1.9rem;
+		}
+	}
+}
+
+@media all and (max-width: 600px) {
+
+	.page-header {
+		padding: 20px 60px 20px 0;
+		text-align: left;
+	}
+	
+	/* navigation */
+	.hamburglar {
+		display: block;
+	}
+
+	nav {
+		&.mainnav {
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			bottom: 0;
+			left: 100%;
+			text-align: right;
+			padding-bottom: 5px;
+
+			.menu {
+				padding-right: 60px;
+			}
+
+			li {
+				display: block;
+				margin: 0;
+				a {
+					padding: 5px 0;
+					border-bottom: 1px solid $white;
+
+					&:hover,
+					&.current,
+					&.section {
+						border-bottom: 1px solid $white;
+					}
+					&.current,
+					&.section {
+						background: $red;
+						color: $white;
+						font-weight: 700;
+					}
+				}
+
+				.menu.level-2 {
+					position: relative;
+				}
+			}
+		}
+
+	}
+
+	section {
+		.row {
+			.col {
+				@include col(1,1)
+			}
+		}
+	}
+
+	section {
+		&.grid {
+			.item {
+				@include grid( $cols: 1, $col_gap: 2%)
+			}
+		}
+	}
+	
+}
+
+@media all and (max-width: 400px) {
+	
+}
