@@ -48,11 +48,11 @@ function MobileNav(){
 function ToggleContent(){
     $('.toggle-button').click(function(e){
     	e.preventDefault();
-        $(this).parent('.togglable').children('.togglable-content').slideToggle(200);
-        $(this).toggleClass('open');
-        if( $(this).children('.fa').length ){
-        	$(this).children('.fa').toggleClass('fa-plus');
-        	$(this).children('.fa').toggleClass('fa-minus');
-        }
+        var link = $(this).parent('a');
+        var wrapper = link.parents('.togglable');
+        wrapper.children('.togglable-content').slideToggle(200);
+        link.toggleClass('open');
+    	$(this).toggleClass('fa-caret-down');
+    	$(this).toggleClass('fa-caret-up');
     });
 }

@@ -2,8 +2,8 @@
 	<ul class="menu inner">
 		<% loop Menu(1) %>
 			<li class="menu-item level-1 pos-$Pos $FirstLast<% if Children %> togglable<% end_if %>">
-				<a class="$LinkingMode<% if Children %> toggle-button<% end_if %>" href="$Link" accesskey="$Pos">
-					<% if Children %><span class="fa fa-plus left"></span><span class="point"></span><% end_if %>
+				<a class="$LinkingMode" href="$Link" accesskey="$Pos">
+					<% if Children %><span class="toggle-button fa fa-caret-down left"></span><% end_if %>
 					$MenuTitle.XML
 				</a>
 				<% if Children %>

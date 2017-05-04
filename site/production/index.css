@@ -1835,27 +1835,31 @@
 /**
  * General layout
  **/
-main {
+main.has-sidebar {
   width: 66.66667%;
   display: block;
   float: left;
   box-sizing: border-box;
   padding: 0 20px; }
-  main:first-of-type {
+  main.has-sidebar:first-of-type {
     padding-left: 0; }
-  main:last-of-type {
+  main.has-sidebar:last-of-type {
     padding-right: 0; }
+    main.has-sidebar:last-of-type:after {
+      clear: both; }
 
-aside {
+aside.sidebar {
   width: 33.33333%;
   display: block;
   float: left;
   box-sizing: border-box;
   padding: 0 20px; }
-  aside:first-of-type {
+  aside.sidebar:first-of-type {
     padding-left: 0; }
-  aside:last-of-type {
+  aside.sidebar:last-of-type {
     padding-right: 0; }
+    aside.sidebar:last-of-type:after {
+      clear: both; }
 
 .inner {
   max-width: 950px;
@@ -1874,6 +1878,31 @@ aside {
 
 .clear {
   clear: both; }
+
+.col.third {
+  width: 33.33333%;
+  display: block;
+  float: left;
+  box-sizing: border-box;
+  padding: 0 20px; }
+  .col.third:first-of-type {
+    padding-left: 0; }
+  .col.third:last-of-type {
+    padding-right: 0; }
+    .col.third:last-of-type:after {
+      clear: both; }
+.col.two-thirds {
+  width: 66.66667%;
+  display: block;
+  float: left;
+  box-sizing: border-box;
+  padding: 0 20px; }
+  .col.two-thirds:first-of-type {
+    padding-left: 0; }
+  .col.two-thirds:last-of-type {
+    padding-right: 0; }
+    .col.two-thirds:last-of-type:after {
+      clear: both; }
 
 .table .row::after {
   content: '';
@@ -1910,7 +1939,7 @@ aside {
  * Page
  **/
 .page {
-  margin: 20px 0; }
+  margin: 50px 0; }
 
 .excerpt {
   border-top: 1px solid #EEEEEE; }
@@ -2107,50 +2136,18 @@ nav.mainnav {
       nav.mainnav li a:hover {
         /*border-bottom: 5px solid $white;
         background: darken( $red, 5% );*/ }
-      nav.mainnav li a.toggle-button {
-        /*padding-right: 2em;*/ }
-        nav.mainnav li a.toggle-button .fa {
-          /*position: absolute;
-          right: 0.5em;
-          top: 3px;*/
-          height: 1em;
-          width: 1em;
-          line-height: 1.5em;
-          font-size: 1em;
-          padding-right: 5px; }
-        nav.mainnav li a.toggle-button .point {
-          width: 10px;
-          height: 10px;
-          display: none;
-          background: #EEEEEE;
-          position: absolute;
-          left: 50%;
-          bottom: -10px;
-          margin-left: -5px;
-          -webkit-transform: rotate(45deg);
-          -moz-transform: rotate(45deg);
-          -o-transform: rotate(45deg);
-          -ms-transform: rotate(45deg);
-          transform: rotate(45deg); }
-        nav.mainnav li a.toggle-button:hover .point {
-          display: block; }
+      nav.mainnav li a .toggle-button {
+        height: 100%;
+        width: 30px;
+        line-height: 1.5em;
+        font-size: 1em;
+        text-align: center;
+        background: #851111;
+        display: none; }
+      nav.mainnav li a:hover .point {
+        display: block; }
     nav.mainnav li .menu.level-2 {
-      position: absolute;
-      left: 0;
-      display: none;
-      background: #EEEEEE;
-      width: 100%;
-      border-bottom: 1px solid #BBBBBB; }
-      nav.mainnav li .menu.level-2 li {
-        display: inline-block;
-        margin: 0; }
-        nav.mainnav li .menu.level-2 li a {
-          display: block;
-          white-space: nowrap;
-          background: #EEEEEE;
-          color: #1E1E1E; }
-    nav.mainnav li:hover .menu.level-2 {
-      display: block; }
+      display: none; }
 
 .hamburglar {
   display: none;
@@ -2249,37 +2246,54 @@ nav.mainnav {
 /**
  * HOMEPAGE
  **/
-section .row .col {
+.homepage section .row .col {
   width: 25%;
   display: block;
   float: left;
   box-sizing: border-box;
   padding: 0 1rem; }
-  section .row .col:first-of-type {
+  .homepage section .row .col:first-of-type {
     padding-left: 0; }
-  section .row .col:last-of-type {
+  .homepage section .row .col:last-of-type {
     padding-right: 0; }
-
-section.grid .item {
-  width: 30.66667%;
-  box-sizing: border-box;
-  margin: 0 2%; }
-  section.grid .item:nth-of-type(n), section.grid .item:nth-of-type(1n+1) {
-    margin: 0 2%;
-    clear: none; }
-  section.grid .item:nth-of-type(3n+1) {
-    margin-left: 0;
-    clear: both; }
-  section.grid .item:first-of-type {
-    margin-left: 0; }
-  section.grid .item:nth-of-type(3n) {
-    margin-right: 0;
-    margin-bottom: 4%;
-    position: relative; }
-    section.grid .item:nth-of-type(3n):after {
+    .homepage section .row .col:last-of-type:after {
       clear: both; }
-  section.grid .item:last-of-type {
-    margin-bottom: 0; }
+.homepage section.grid {
+  margin-top: 50px; }
+  .homepage section.grid .item {
+    width: 30.66667%;
+    box-sizing: border-box;
+    margin: 0 2%;
+    border: none;
+    position: relative; }
+    .homepage section.grid .item:nth-of-type(n), .homepage section.grid .item:nth-of-type(1n+1) {
+      margin: 0 2%;
+      clear: none; }
+    .homepage section.grid .item:nth-of-type(3n+1) {
+      margin-left: 0;
+      clear: both; }
+    .homepage section.grid .item:first-of-type {
+      margin-left: 0; }
+    .homepage section.grid .item:nth-of-type(3n) {
+      margin-right: 0;
+      margin-bottom: 4%;
+      position: relative; }
+      .homepage section.grid .item:nth-of-type(3n):after {
+        clear: both; }
+    .homepage section.grid .item:last-of-type {
+      margin-bottom: 0; }
+    .homepage section.grid .item .liner {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 100%;
+      background: #1E1E1E; }
+      .homepage section.grid .item .liner .inner {
+        padding: 60% 20px 0;
+        color: #FFFFFF;
+        position: relative; }
+        .homepage section.grid .item .liner .inner h3 {
+          text-align: center; }
 
 /**
  * Responsive
@@ -2305,6 +2319,8 @@ section.grid .item {
       padding-left: 0; }
     section .row .col:last-of-type {
       padding-right: 0; }
+      section .row .col:last-of-type:after {
+        clear: both; }
 
   section.grid .item {
     width: 48%;
@@ -2366,6 +2382,8 @@ section.grid .item {
           background: #770f0f;
           color: #FFFFFF;
           font-weight: 700; }
+        nav.mainnav li a .toggle-button {
+          display: block; }
       nav.mainnav li .menu.level-2 {
         position: relative;
         width: 100%;
@@ -2387,6 +2405,8 @@ section.grid .item {
       padding-left: 0; }
     section .row .col:last-of-type {
       padding-right: 0; }
+      section .row .col:last-of-type:after {
+        clear: both; }
 
   section.grid .item {
     width: 100%;
