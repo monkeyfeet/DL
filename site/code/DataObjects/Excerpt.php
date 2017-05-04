@@ -5,10 +5,6 @@ class Excerpt extends DataObject {
 		'Title' => 'Varchar(255)',
 		'Content' => 'HTMLText'
 	);
-		
-	static private $has_one = array(
-		'SiteConfig' => 'SiteConfig'
-	);
 	
 	static $summary_fields = array(
 		'Title' => 'Title',

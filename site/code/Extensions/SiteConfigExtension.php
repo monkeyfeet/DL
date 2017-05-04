@@ -5,10 +5,6 @@ class SiteConfigExtension extends DataExtension {
 		'AdminToEmails' => 'Text',
 		'AdminFromEmail' => 'Text'
 	);
-
-	static $has_many = array(
-		'Excerpts' => 'Excerpt'
-	);
 	
 	public function updateCMSFields(FieldList $fields){	
 	

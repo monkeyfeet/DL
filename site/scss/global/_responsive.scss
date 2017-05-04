@@ -71,6 +71,7 @@
 	.page-header {
 		padding: 20px 60px 20px 0;
 		text-align: left;
+		border-bottom: 9px solid $red;
 	}
 	
 	/* navigation */
@@ -115,6 +116,18 @@
 
 				.menu.level-2 {
 					position: relative;
+					width: 100%;
+					padding-right: 0;
+					background: lighten($red, 3%);
+
+					li {
+						a {
+							padding-right: 10px;
+							color: $white;
+							background: lighten($red, 3%);
+							border-bottom: 1px solid $white;
+						}
+					}
 				}
 			}
 		}

@@ -3,8 +3,8 @@
 		<% loop Menu(1) %>
 			<li class="menu-item level-1 pos-$Pos $FirstLast<% if Children %> togglable<% end_if %>">
 				<a class="$LinkingMode<% if Children %> toggle-button<% end_if %>" href="$Link" accesskey="$Pos">
+					<% if Children %><span class="fa fa-plus left"></span><span class="point"></span><% end_if %>
 					$MenuTitle.XML
-					<% if Children %><span class="fa fa-plus right"></span><% end_if %>
 				</a>
 				<% if Children %>
 	 				<ul class="menu level-2 togglable-content">
