@@ -2,15 +2,12 @@
 
 	<div class="inner">
 	
-		<main class="typography">
 
-			<div class="intro col two-thirds">
+			<div class="main typography col has-sidebar">
 				$Content
 			</div>
 
-			<div class="col third">
-				<h2>Buy the book now</h2>
-			</div>
+			<% include Sidebar %>
 
 			<div class="cf"></div>
 
@@ -47,7 +44,6 @@
 
 			</section>
 
-		</main>
 
 	</div>
 
