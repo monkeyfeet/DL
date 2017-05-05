@@ -1745,22 +1745,22 @@
 .red-text {
   color: #770f0f !important; }
 
-.black-background {
+.black-bg {
   background-color: #1E1E1E !important; }
 
-.blue-background {
+.blue-bg {
   background-color: #06b8e4 !important; }
 
-.grey-background {
+.grey-bg {
   background-color: #BBBBBB !important; }
 
-.green-background {
+.green-bg {
   background-color: #69bd45 !important; }
 
-.yellow-background {
+.yellow-bg {
   background-color: #ffd02c !important; }
 
-.red-background {
+.red-bg {
   background-color: #770f0f !important; }
 
 /**
@@ -2157,29 +2157,32 @@ nav.secondarynav {
     padding: 0; }
     nav.secondarynav .menu li {
       text-align: right;
-      background: #1E1E1E;
+      /*background: $black;*/
       padding: 0 20px;
       margin: 0; }
       nav.secondarynav .menu li a {
-        color: #BBBBBB;
-        border-bottom: 1px solid #BBBBBB;
+        color: #1E1E1E;
+        border-bottom: 1px dotted #1E1E1E;
         display: block;
         text-transform: uppercase;
         padding: 5px 0; }
-        nav.secondarynav .menu li a.section, nav.secondarynav .menu li a.current, nav.secondarynav .menu li a:hover {
-          color: #FFFFFF;
-          border-bottom: 1px solid #BBBBBB; }
-        nav.secondarynav .menu li a.section {
+        nav.secondarynav .menu li a.current, nav.secondarynav .menu li a:hover {
+          border-bottom: 1px solid #1E1E1E; }
+        nav.secondarynav .menu li a.current {
           /*font-weight: 700;*/ }
       nav.secondarynav .menu li.top {
         background: #FFFFFF;
         padding: 0; }
         nav.secondarynav .menu li.top a {
           font-family: 'Droid Serif', serif;
-          color: #1E1E1E;
-          border: none; }
+          font-weight: 700;
+          font-size: 1.3rem;
+          padding-bottom: 0;
+          /*padding-right: 20px;*/
+          line-height: 0.9rem;
+          border-bottom: 1px solid #1E1E1E; }
       nav.secondarynav .menu li.first {
-        padding-top: 10px; }
+        /*padding-top: 10px;*/ }
       nav.secondarynav .menu li.last {
         padding-bottom: 20px; }
 

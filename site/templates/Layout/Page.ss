@@ -22,7 +22,7 @@
 							<a class="section $FirstLast" href="$Level(1).Link">$Level(1).MenuTitle</a>
 						</li>
 						<% loop Menu(2) %>
-							<li class="menu-item $FirstLast">
+							<li class="menu-item grey-bg $FirstLast">
 								<a class="$LinkingMode $FirstLast" href="$Link">$MenuTitle</a>
 							</li>
 						<% end_loop %>

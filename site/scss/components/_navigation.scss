@@ -75,27 +75,25 @@
 
 			li {
 				text-align: right;
-				background: $black;
+				/*background: $black;*/
 				padding: 0 20px;
 				margin: 0;
 
 
 
 				a {
-					color: $grey;
-					border-bottom: 1px solid $grey;
+					color: $black;
+					border-bottom: 1px dotted $black;
 					display: block;
 					text-transform: uppercase;
 					padding: 5px 0;
 
-					&.section,
 					&.current,
 					&:hover {
-						color: $white;
-						border-bottom: 1px solid $grey;
+						border-bottom: 1px solid $black;
 					}
 
-					&.section {
+					&.current {
 						/*font-weight: 700;*/
 					}
 				}
@@ -105,12 +103,16 @@
 					padding: 0;
 					a {
 						font-family: 'Droid Serif', serif;
-						color: $black;
-						border: none;
+						font-weight: 700;
+						font-size: 1.3rem;
+						padding-bottom: 0;
+						/*padding-right: 20px;*/
+						line-height: 0.9rem;
+						border-bottom: 1px solid $black;
 					}
 				}
 				&.first {
-					padding-top: 10px;
+					/*padding-top: 10px;*/
 				}
 				&.last {
 					padding-bottom: 20px;
