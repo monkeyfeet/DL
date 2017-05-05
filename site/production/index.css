@@ -1835,6 +1835,10 @@
 /**
  * General layout
  **/
+body, html {
+  position: relative;
+  height: 100%; }
+
 .main.has-sidebar {
   width: 66.66667%;
   display: block;
@@ -1944,15 +1948,47 @@
 .excerpt {
   border-top: 1px solid #EEEEEE; }
   .excerpt .inner {
-    max-width: 800px; }
-  .excerpt p {
-    font-family: 'Droid Serif', serif;
-    color: #770f0f;
-    padding-top: 20px;
-    font-size: 1.5rem !important;
-    line-height: 1.5em !important;
-    font-style: italic;
-    text-align: center; }
+    max-width: 850px;
+    padding: 0 50px;
+    margin-top: 20px;
+    position: relative; }
+    .excerpt .inner p {
+      font-family: 'Droid Serif', serif;
+      color: #770f0f;
+      font-size: 1.5rem !important;
+      line-height: 1.5em !important;
+      font-style: italic;
+      text-align: center;
+      padding: 0 20px; }
+    .excerpt .inner .dots {
+      position: absolute;
+      top: 50%;
+      height: 100%; }
+      .excerpt .inner .dots .dot {
+        width: 10px;
+        height: 10px;
+        display: block;
+        float: left;
+        background: #770f0f;
+        border-radius: 5px;
+        position: relative;
+        margin-top: -5px; }
+        .excerpt .inner .dots .dot.small {
+          width: 6px;
+          height: 6px;
+          margin-top: -3px; }
+        .excerpt .inner .dots .dot.med {
+          width: 8px;
+          height: 8px;
+          margin-top: -4px; }
+      .excerpt .inner .dots.left {
+        left: 0; }
+        .excerpt .inner .dots.left .dot {
+          margin-right: 7px; }
+      .excerpt .inner .dots.right {
+        right: 0; }
+        .excerpt .inner .dots.right .dot {
+          margin-left: 7px; }
 
 footer.page-footer {
   background: #770f0f;
@@ -2174,11 +2210,11 @@ nav.secondarynav {
         background: #FFFFFF;
         padding: 0; }
         nav.secondarynav .menu li.top a {
-          font-family: 'Droid Serif', serif;
+          /*font-family: 'Droid Serif', serif;*/
           font-weight: 700;
           font-size: 1.3rem;
           padding-bottom: 0;
-          /*padding-right: 20px;*/
+          padding-right: 20px;
           line-height: 0.9rem;
           border-bottom: 1px solid #1E1E1E; }
       nav.secondarynav .menu li.first {
@@ -2499,7 +2535,7 @@ nav.secondarynav {
     display: block; }
 
   nav.mainnav {
-    position: fixed;
+    position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
