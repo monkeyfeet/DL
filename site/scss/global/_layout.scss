@@ -168,11 +168,37 @@ body, html {
 
 
 }
+
+/**
+ * Sidebar
+ **/
+.sidebar {
+	.buy-button {
+		display: block;
+		text-align: center;
+		background: $black;
+
+		.liner {
+			padding: 20px;
+
+			span {
+				color: $grey;
+			}
+		}
+
+		&:hover {
+			background: lighten($black, 5%);
+			span {
+				color: $white;
+			}
+		}
+	}
+
+}
  
  
 
 footer {
-
 	&.page-footer {
 		background: $red;
 		color: $white;

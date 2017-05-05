@@ -1730,6 +1730,9 @@
 .black-text {
   color: #1E1E1E !important; }
 
+.white-text {
+  color: #FFFFFF !important; }
+
 .blue-text {
   color: #06b8e4 !important; }
 
@@ -1989,6 +1992,22 @@ body, html {
         right: 0; }
         .excerpt .inner .dots.right .dot {
           margin-left: 7px; }
+
+/**
+ * Sidebar
+ **/
+.sidebar .buy-button {
+  display: block;
+  text-align: center;
+  background: #1E1E1E; }
+  .sidebar .buy-button .liner {
+    padding: 20px; }
+    .sidebar .buy-button .liner span {
+      color: #BBBBBB; }
+  .sidebar .buy-button:hover {
+    background: #2b2b2b; }
+    .sidebar .buy-button:hover span {
+      color: #FFFFFF; }
 
 footer.page-footer {
   background: #770f0f;

@@ -29,6 +29,13 @@
 					</ul>
 				</nav>
 
+				<a class="buy-button white-text" href="#">
+					<div class="liner">
+						<h3>Buy the book</h3>
+						<span class="">Purchase on Amazon now</span>
+					</div>
+				</a>
+
 			</div>
 		<% end_if %>
 
