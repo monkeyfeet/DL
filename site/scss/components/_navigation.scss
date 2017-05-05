@@ -43,10 +43,12 @@
 				.toggle-button {
 					height: 100%;
 					width: 30px;
-					line-height: 1.5em;
-					font-size: 1em;
+					line-height: 1em;
+					font-size: 1.5em;
 					text-align: center;
-					background: lighten($red, 3%);
+					background: darken( $red, 5% );
+					color: $white;
+					border-radius: 1px;
 					display: none;
 				}
 
@@ -61,6 +63,59 @@
 				display: none;
 			}
 
+		}
+	}
+
+	&.secondarynav {
+		/*padding: 20px;*/
+
+		.menu {
+			list-style: none;
+			padding: 0;
+
+			li {
+				text-align: right;
+				background: $black;
+				padding: 0 20px;
+				margin: 0;
+
+
+
+				a {
+					color: $grey;
+					border-bottom: 1px solid $grey;
+					display: block;
+					text-transform: uppercase;
+					padding: 5px 0;
+
+					&.section,
+					&.current,
+					&:hover {
+						color: $white;
+						border-bottom: 1px solid $grey;
+					}
+
+					&.section {
+						/*font-weight: 700;*/
+					}
+				}
+
+				&.top {
+					background: $white;
+					padding: 0;
+					a {
+						font-family: 'Droid Serif', serif;
+						color: $black;
+						border: none;
+					}
+				}
+				&.first {
+					padding-top: 10px;
+				}
+				&.last {
+					padding-bottom: 20px;
+				}
+			}
 		}
 	}
 

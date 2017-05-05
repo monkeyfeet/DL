@@ -2,7 +2,7 @@
 
 	<div class="inner">
 
-		<main class="typography<% if Menu(2) %> col has-sidebar<% end_if %>">
+		<div class="main typography<% if Menu(2) %> col has-sidebar<% end_if %>">
 			<article>
 				<header>
 					<h1>$Title</h1>
@@ -11,20 +11,25 @@
 				$Form
 			</article>
 
-		</main>
+		</div>
 
 		<% if Menu(2) %>
-			<aside class="typography col sidebar">
+			<div class="typography col sidebar">
 
-				<h2>Side bar</h2>
-
-				<nav>
-					<% loop Menu(1) %>
-						<a href="{$Link}">{$MenuTitle.XML}</a>
-					<% end_loop %>
+				<nav class="secondarynav">
+					<ul class="menu inner">
+						<li class="menu-item top">
+							<a class="section $FirstLast" href="$Level(1).Link">$Level(1).MenuTitle</a>
+						</li>
+						<% loop Menu(2) %>
+							<li class="menu-item $FirstLast">
+								<a class="$LinkingMode $FirstLast" href="$Link">$MenuTitle</a>
+							</li>
+						<% end_loop %>
+					</ul>
 				</nav>
 
-			</aside>
+			</div>
 		<% end_if %>
 
 	</div>

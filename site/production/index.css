@@ -1835,30 +1835,30 @@
 /**
  * General layout
  **/
-main.has-sidebar {
+.main.has-sidebar {
   width: 66.66667%;
   display: block;
   float: left;
   box-sizing: border-box;
   padding: 0 20px; }
-  main.has-sidebar:first-of-type {
+  .main.has-sidebar:first-of-type {
     padding-left: 0; }
-  main.has-sidebar:last-of-type {
+  .main.has-sidebar:last-of-type {
     padding-right: 0; }
-    main.has-sidebar:last-of-type:after {
+    .main.has-sidebar:last-of-type:after {
       clear: both; }
 
-aside.sidebar {
+.sidebar {
   width: 33.33333%;
   display: block;
   float: left;
   box-sizing: border-box;
   padding: 0 20px; }
-  aside.sidebar:first-of-type {
+  .sidebar:first-of-type {
     padding-left: 0; }
-  aside.sidebar:last-of-type {
+  .sidebar:last-of-type {
     padding-right: 0; }
-    aside.sidebar:last-of-type:after {
+    .sidebar:last-of-type:after {
       clear: both; }
 
 .inner {
@@ -1981,7 +1981,7 @@ h1 {
   line-height: 1em;
   margin-bottom: 1rem;
   font-weight: 400;
-  font-family: 'Crimson Text', serif;
+  /*font-family: 'Crimson Text', serif;*/
   font-family: 'Droid Serif', serif;
   text-transform: uppercase; }
 
@@ -1990,7 +1990,7 @@ h2 {
   line-height: 1em;
   margin-bottom: 0.5rem;
   font-weight: 400;
-  font-family: 'Crimson Text', serif;
+  /*font-family: 'Crimson Text', serif;*/
   font-family: 'Droid Serif', serif;
   font-style: italic; }
 
@@ -2139,15 +2139,49 @@ nav.mainnav {
       nav.mainnav li a .toggle-button {
         height: 100%;
         width: 30px;
-        line-height: 1.5em;
-        font-size: 1em;
+        line-height: 1em;
+        font-size: 1.5em;
         text-align: center;
-        background: #851111;
+        background: #600c0c;
+        color: #FFFFFF;
+        border-radius: 1px;
         display: none; }
       nav.mainnav li a:hover .point {
         display: block; }
     nav.mainnav li .menu.level-2 {
       display: none; }
+nav.secondarynav {
+  /*padding: 20px;*/ }
+  nav.secondarynav .menu {
+    list-style: none;
+    padding: 0; }
+    nav.secondarynav .menu li {
+      text-align: right;
+      background: #1E1E1E;
+      padding: 0 20px;
+      margin: 0; }
+      nav.secondarynav .menu li a {
+        color: #BBBBBB;
+        border-bottom: 1px solid #BBBBBB;
+        display: block;
+        text-transform: uppercase;
+        padding: 5px 0; }
+        nav.secondarynav .menu li a.section, nav.secondarynav .menu li a.current, nav.secondarynav .menu li a:hover {
+          color: #FFFFFF;
+          border-bottom: 1px solid #BBBBBB; }
+        nav.secondarynav .menu li a.section {
+          /*font-weight: 700;*/ }
+      nav.secondarynav .menu li.top {
+        background: #FFFFFF;
+        padding: 0; }
+        nav.secondarynav .menu li.top a {
+          font-family: 'Droid Serif', serif;
+          color: #1E1E1E;
+          border: none; }
+      nav.secondarynav .menu li.first {
+        padding-top: 10px; }
+      nav.secondarynav .menu li.last {
+        padding-bottom: 20px; }
 
 .hamburglar {
   display: none;
@@ -2302,6 +2336,9 @@ nav.mainnav {
   .inner {
     padding: 0 20px; } }
 @media all and (max-width: 800px) {
+  .homepage section.grid .item h3 {
+    font-size: 1.5rem; }
+
   .page-header .logo {
     width: 100px; }
   .page-header h1 {
@@ -2343,18 +2380,103 @@ nav.mainnav {
     section.grid .item:last-of-type {
       margin-bottom: 0; } }
 @media all and (max-width: 700px) {
+  .main.has-sidebar {
+    width: 50%;
+    display: block;
+    float: left;
+    box-sizing: border-box;
+    padding: 0 20px; }
+    .main.has-sidebar:first-of-type {
+      padding-left: 0; }
+    .main.has-sidebar:last-of-type {
+      padding-right: 0; }
+      .main.has-sidebar:last-of-type:after {
+        clear: both; }
+
+  .sidebar {
+    width: 50%;
+    display: block;
+    float: left;
+    box-sizing: border-box;
+    padding: 0 20px; }
+    .sidebar:first-of-type {
+      padding-left: 0; }
+    .sidebar:last-of-type {
+      padding-right: 0; }
+      .sidebar:last-of-type:after {
+        clear: both; }
+
   .page-header .logo {
     width: 75px; }
   .page-header h1 {
     font-size: 3rem; }
   .page-header h2 {
-    font-size: 1.9rem; } }
+    font-size: 1.9rem; }
+
+  .homepage .col.third {
+    width: 100%;
+    display: block;
+    float: left;
+    box-sizing: border-box;
+    padding: 0 0px; }
+    .homepage .col.third:first-of-type {
+      padding-left: 0; }
+    .homepage .col.third:last-of-type {
+      padding-right: 0; }
+      .homepage .col.third:last-of-type:after {
+        clear: both; }
+  .homepage .col.two-thirds {
+    width: 100%;
+    display: block;
+    float: left;
+    box-sizing: border-box;
+    padding: 0 0px; }
+    .homepage .col.two-thirds:first-of-type {
+      padding-left: 0; }
+    .homepage .col.two-thirds:last-of-type {
+      padding-right: 0; }
+      .homepage .col.two-thirds:last-of-type:after {
+        clear: both; }
+  .homepage section.grid .item h3 {
+    font-size: 1.2rem; } }
 @media all and (max-width: 600px) {
+  .main.has-sidebar {
+    width: 100%;
+    display: block;
+    float: left;
+    box-sizing: border-box;
+    padding: 0 0px; }
+    .main.has-sidebar:first-of-type {
+      padding-left: 0; }
+    .main.has-sidebar:last-of-type {
+      padding-right: 0; }
+      .main.has-sidebar:last-of-type:after {
+        clear: both; }
+
+  .sidebar {
+    width: 100%;
+    display: block;
+    float: left;
+    box-sizing: border-box;
+    padding: 0 0px; }
+    .sidebar:first-of-type {
+      padding-left: 0; }
+    .sidebar:last-of-type {
+      padding-right: 0; }
+      .sidebar:last-of-type:after {
+        clear: both; }
+
   .page-header {
     padding: 20px 60px 20px 0;
     text-align: left;
     border-bottom: 9px solid #770f0f; }
 
+  /*.col {
+  	width: 100% !important;
+  	padding-left: 0 !important;
+  	padding-right: 0 !important;
+  	float: none !important;
+  }*/
   /* navigation */
   .hamburglar {
     display: block; }
@@ -2388,7 +2510,7 @@ nav.mainnav {
         position: relative;
         width: 100%;
         padding-right: 0;
-        background: #851111; }
+        background: #690d0d; }
         nav.mainnav li .menu.level-2 li a {
           padding-right: 10px;
           color: #FFFFFF;

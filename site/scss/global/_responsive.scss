@@ -14,6 +14,22 @@
 
 @media all and (max-width: 800px) {
 
+	.homepage {
+
+		section {
+			&.grid {
+
+				.item {
+
+					h3 {
+						font-size: 1.5rem;
+					}
+				}
+			}
+		}
+
+	}
+
 	.page-header {
 
 		.logo {
@@ -49,6 +65,17 @@
 
 @media all and (max-width: 700px) {
 
+	.main {
+		&.has-sidebar {
+			@include col(1,2,20px);
+		}
+		
+	}
+
+	.sidebar {
+		@include col(1,2,20px);
+	}
+
 	.page-header {
 
 		.logo {
@@ -64,15 +91,58 @@
 			font-size: 1.9rem;
 		}
 	}
+
+	.homepage {
+
+		.col {
+			&.third {
+				@include col(1,1,0px);
+			}
+			&.two-thirds {
+				@include col(1,1,0px);
+			}
+		}
+
+		section {
+			&.grid {
+
+				.item {
+
+					h3 {
+						font-size: 1.2rem;
+					}
+				}
+			}
+		}
+
+	}
 }
 
 @media all and (max-width: 600px) {
+
+	.main {
+		&.has-sidebar {
+			@include col(1,1,0px);
+		}
+		
+	}
+
+	.sidebar {
+		@include col(1,1,0px);
+	}
 
 	.page-header {
 		padding: 20px 60px 20px 0;
 		text-align: left;
 		border-bottom: 9px solid $red;
 	}
+
+	/*.col {
+		width: 100% !important;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+		float: none !important;
+	}*/
 	
 	/* navigation */
 	.hamburglar {
@@ -121,7 +191,7 @@
 					position: relative;
 					width: 100%;
 					padding-right: 0;
-					background: lighten($red, 3%);
+					background: darken($red, 3%);
 
 					li {
 						a {
@@ -140,7 +210,7 @@
 	section {
 		.row {
 			.col {
-				@include col(1,1)
+				@include col(1,1);
 			}
 		}
 	}
@@ -148,7 +218,7 @@
 	section {
 		&.grid {
 			.item {
-				@include grid( $cols: 1, $col_gap: 2%)
+				@include grid( $cols: 1, $col_gap: 2%);
 			}
 		}
 	}
