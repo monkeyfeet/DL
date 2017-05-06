@@ -260,8 +260,6 @@
 
 	&:last-of-type {
 		padding-right: 0;
-		&:after{
-			clear: both;
-		}
+		@include clearfix();
 	}
 }

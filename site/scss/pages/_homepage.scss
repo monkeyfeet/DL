@@ -24,6 +24,7 @@
 				background-size: cover;
 				background-position: center center;
 				@include animate();
+				text-decoration: none;
 
 				.liner {
 					position: relative;

@@ -12,15 +12,13 @@
 		position: relative;
 		li {
 			display: inline-block;
-			/*margin-right: 10px;
-			position: relative;*/
+
 			&.last {
 				margin-right: 0;
 			}
 
 			a {
-				/*font-family: 'Droid Serif', serif;
-				font-weight: 700;*/
+				font-size: 1.3rem;
 				text-transform: uppercase;
 				padding: 3px 10px;
 				display: block;
@@ -28,16 +26,13 @@
 				color: $white;
 				border-bottom: 5px solid $red;
 				position: relative;
-				/*position: relative;*/
-				&.current, &.section {
+				outline: none;
+
+				&.current,
+				&.section {
 					background: $white;
 					color: $red;
 					border-color: $white;
-				}
-
-				&:hover {
-					/*border-bottom: 5px solid $white;
-					background: darken( $red, 5% );*/
 				}
 
 				.toggle-button {
@@ -67,7 +62,6 @@
 	}
 
 	&.secondarynav {
-		/*padding: 20px;*/
 
 		.menu {
 			list-style: none;
@@ -75,11 +69,8 @@
 
 			li {
 				text-align: right;
-				/*background: $black;*/
 				padding: 0 20px;
 				margin: 0;
-
-
 
 				a {
 					color: $black;
@@ -92,17 +83,13 @@
 					&:hover {
 						border-bottom: 1px solid $black;
 					}
-
-					&.current {
-						/*font-weight: 700;*/
-					}
 				}
 
 				&.top {
 					background: $white;
 					padding: 0;
+
 					a {
-						/*font-family: 'Droid Serif', serif;*/
 						font-weight: 700;
 						font-size: 1.3rem;
 						padding-bottom: 0;
@@ -111,12 +98,11 @@
 						border-bottom: 1px solid $black;
 					}
 				}
-				&.first {
-					/*padding-top: 10px;*/
-				}
+
 				&.last {
 					padding-bottom: 20px;
 				}
+
 			}
 		}
 	}

@@ -70,6 +70,7 @@ h4 {
 
 	a {
 		@include animate();
+		outline: none;
 
 		&:not(.button) {
 			text-decoration: none;
