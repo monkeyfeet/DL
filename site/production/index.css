@@ -2019,8 +2019,11 @@ body, html {
 footer.page-footer {
   background: #770f0f;
   color: #FFFFFF;
-  padding: 50px 0 150px;
+  padding: 50px 0 20px;
   text-align: right; }
+  footer.page-footer .inner {
+    padding-bottom: 125px;
+    background: url("../images/triune-white-75.png") right bottom no-repeat; }
 
 /**
  * Typography styles
