@@ -2019,7 +2019,8 @@ body, html {
 footer.page-footer {
   background: #770f0f;
   color: #FFFFFF;
-  padding: 20px 0; }
+  padding: 50px 0 150px;
+  text-align: right; }
 
 /**
  * Typography styles
@@ -2180,7 +2181,7 @@ nav.mainnav {
     nav.mainnav li.last {
       margin-right: 0; }
     nav.mainnav li a {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       text-transform: uppercase;
       padding: 3px 10px;
       display: block;
