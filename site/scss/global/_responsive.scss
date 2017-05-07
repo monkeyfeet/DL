@@ -54,13 +54,13 @@
 		}
 	}
 
-	section {
+	/*section {
 		&.grid {
 			.item {
 				@include grid( $cols: 2, $col_gap: 2%)
 			}
 		}
-	}
+	}*/
 }
 
 @media all and (max-width: 700px) {
@@ -215,16 +215,76 @@
 		}
 	}
 
-	section {
+	/*section {
 		&.grid {
 			.item {
 				@include grid( $cols: 1, $col_gap: 2%);
 			}
 		}
-	}
+	}*/
 	
 }
 
-@media all and (max-width: 400px) {
+@media all and (min-width: 551px) {
+
+	.homepage {
+
+		section {
+			&.grid {
+
+				.item {
+					@include grid( $cols: 3, $col_gap: 2% );
+				}
+			}
+		}
+	}
+
+}
+
+
+
+@media all and (max-width: 550px) {
+
+	.homepage {
+
+		section {
+			&.grid {
+
+				.item {
+					&.first {
+						width: 100%;
+						margin-bottom: 20px;
+						.liner {
+							padding-bottom: 55%;
+							.inner {
+								padding-top: 35%;
+								
+							}
+						}
+
+					}
+
+					&.middle,
+					&.last {
+						width: 47%;
+					}
+
+					&.middle {
+						margin-right: 3%;
+
+					}
+
+					&.last {
+						margin-left: 3%;
+
+					}
+
+					h3 {
+						font-size: 1.5rem;
+					}
+				}
+			}
+		}
+	}
 	
 }

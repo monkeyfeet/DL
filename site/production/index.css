@@ -2233,6 +2233,8 @@ nav.secondarynav .menu {
         padding-right: 20px;
         line-height: 0.9rem;
         border-bottom: 1px solid #1E1E1E; }
+    nav.secondarynav .menu li.first {
+      padding-top: 10px; }
     nav.secondarynav .menu li.last {
       padding-bottom: 20px; }
 
@@ -2350,9 +2352,6 @@ nav.secondarynav .menu {
 .homepage section.grid {
   margin-top: 50px; }
   .homepage section.grid .item {
-    width: 30.66667%;
-    box-sizing: border-box;
-    margin: 0 2%;
     border: none;
     position: relative;
     background-size: cover;
@@ -2362,22 +2361,6 @@ nav.secondarynav .menu {
     -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
     text-decoration: none; }
-    .homepage section.grid .item:nth-of-type(n), .homepage section.grid .item:nth-of-type(1n+1) {
-      margin: 0 2%;
-      clear: none; }
-    .homepage section.grid .item:nth-of-type(3n+1) {
-      margin-left: 0;
-      clear: both; }
-    .homepage section.grid .item:first-of-type {
-      margin-left: 0; }
-    .homepage section.grid .item:nth-of-type(3n) {
-      margin-right: 0;
-      margin-bottom: 4%;
-      position: relative; }
-      .homepage section.grid .item:nth-of-type(3n):after {
-        clear: both; }
-    .homepage section.grid .item:last-of-type {
-      margin-bottom: 0; }
     .homepage section.grid .item .liner {
       position: relative;
       width: 100%;
@@ -2431,26 +2414,13 @@ nav.secondarynav .menu {
         clear: both;
         display: block; }
 
-  section.grid .item {
-    width: 48%;
-    box-sizing: border-box;
-    margin: 0 2%; }
-    section.grid .item:nth-of-type(n), section.grid .item:nth-of-type(1n+1) {
-      margin: 0 2%;
-      clear: none; }
-    section.grid .item:nth-of-type(2n+1) {
-      margin-left: 0;
-      clear: both; }
-    section.grid .item:first-of-type {
-      margin-left: 0; }
-    section.grid .item:nth-of-type(2n) {
-      margin-right: 0;
-      margin-bottom: 4%;
-      position: relative; }
-      section.grid .item:nth-of-type(2n):after {
-        clear: both; }
-    section.grid .item:last-of-type {
-      margin-bottom: 0; } }
+  /*section {
+  	&.grid {
+  		.item {
+  			@include grid( $cols: 2, $col_gap: 2%)
+  		}
+  	}
+  }*/ }
 @media all and (max-width: 700px) {
   .main.has-sidebar {
     width: 50%;
@@ -2616,25 +2586,49 @@ nav.secondarynav .menu {
         clear: both;
         display: block; }
 
-  section.grid .item {
-    width: 100%;
+  /*section {
+  	&.grid {
+  		.item {
+  			@include grid( $cols: 1, $col_gap: 2%);
+  		}
+  	}
+  }*/ }
+@media all and (min-width: 551px) {
+  .homepage section.grid .item {
+    width: 30.66667%;
     box-sizing: border-box;
     margin: 0 2%; }
-    section.grid .item:nth-of-type(n), section.grid .item:nth-of-type(1n+1) {
+    .homepage section.grid .item:nth-of-type(n), .homepage section.grid .item:nth-of-type(1n+1) {
       margin: 0 2%;
       clear: none; }
-    section.grid .item:nth-of-type(1n+1) {
+    .homepage section.grid .item:nth-of-type(3n+1) {
       margin-left: 0;
       clear: both; }
-    section.grid .item:first-of-type {
+    .homepage section.grid .item:first-of-type {
       margin-left: 0; }
-    section.grid .item:nth-of-type(1n) {
+    .homepage section.grid .item:nth-of-type(3n) {
       margin-right: 0;
       margin-bottom: 4%;
       position: relative; }
-      section.grid .item:nth-of-type(1n):after {
+      .homepage section.grid .item:nth-of-type(3n):after {
         clear: both; }
-    section.grid .item:last-of-type {
+    .homepage section.grid .item:last-of-type {
       margin-bottom: 0; } }
+@media all and (max-width: 550px) {
+  .homepage section.grid .item.first {
+    width: 100%;
+    margin-bottom: 20px; }
+    .homepage section.grid .item.first .liner {
+      padding-bottom: 55%; }
+      .homepage section.grid .item.first .liner .inner {
+        padding-top: 35%; }
+  .homepage section.grid .item.middle, .homepage section.grid .item.last {
+    width: 47%; }
+  .homepage section.grid .item.middle {
+    margin-right: 3%; }
+  .homepage section.grid .item.last {
+    margin-left: 3%; }
+  .homepage section.grid .item h3 {
+    font-size: 1.5rem; } }
 
 /*# sourceMappingURL=index.css.map */
