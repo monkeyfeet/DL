@@ -81,6 +81,13 @@ hr {
 			max-width: 100%;
 			height: auto;
 		}
+
+		svg {
+
+			width: 100%;
+			height: auto;
+			fill: $black;
+		}
 	}
 
 	h1 {
@@ -207,8 +214,22 @@ footer {
 		text-align: right;
 
 		.inner {
-			padding-bottom: 125px;
-			background: url('../images/triune-white-75.png') right bottom no-repeat;
+			position: relative;
+			padding-bottom: 150px;
+			/*background: url('../images/triune-white-75.png') right bottom no-repeat;*/
+
+			.logo {
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				width: 130px;
+				height: auto;
+				svg {
+					width: 100%;
+					height: auto;
+					fill: darken($red, 3%);
+				}
+			}
 		}
 	}
 }

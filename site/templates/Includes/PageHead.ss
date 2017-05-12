@@ -1,7 +1,7 @@
 <header class="page-header">
 	<div class="inner">
 		<a class="logo" href="{$BaseURL}">
-			<img src="/site/images/logo-130.png" alt="{$SiteConfig.Title} logo" />
+			<% include Logo %>
 		</a>
 		<h1>$SiteConfig.Title</h1>
 		<h2>$SiteConfig.Tagline</h2>

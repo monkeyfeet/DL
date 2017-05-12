@@ -1929,6 +1929,10 @@ body, html {
     .page-header .logo img {
       max-width: 100%;
       height: auto; }
+    .page-header .logo svg {
+      width: 100%;
+      height: auto;
+      fill: #1E1E1E; }
   .page-header h1 {
     font-size: 5rem; }
   .page-header h2 {
@@ -2022,8 +2026,19 @@ footer.page-footer {
   padding: 50px 0 20px;
   text-align: right; }
   footer.page-footer .inner {
-    padding-bottom: 125px;
-    background: url("../images/triune-white-75.png") right bottom no-repeat; }
+    position: relative;
+    padding-bottom: 150px;
+    /*background: url('../images/triune-white-75.png') right bottom no-repeat;*/ }
+    footer.page-footer .inner .logo {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 130px;
+      height: auto; }
+      footer.page-footer .inner .logo svg {
+        width: 100%;
+        height: auto;
+        fill: #690d0d; }
 
 /**
  * Typography styles
