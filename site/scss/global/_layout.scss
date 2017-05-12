@@ -106,6 +106,13 @@ hr {
  **/
 .page {
 	margin: 50px 0;
+
+	.typography {
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+	}
 }
 
 .excerpt {
@@ -227,7 +234,7 @@ footer {
 				svg {
 					width: 100%;
 					height: auto;
-					fill: darken($red, 3%);
+					fill: darken($red, 5%);
 				}
 			}
 		}

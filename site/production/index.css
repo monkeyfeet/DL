@@ -1944,6 +1944,9 @@ body, html {
  **/
 .page {
   margin: 50px 0; }
+  .page .typography img {
+    max-width: 100%;
+    height: auto; }
 
 .excerpt {
   border-top: 1px solid #BBBBBB; }
@@ -2038,7 +2041,7 @@ footer.page-footer {
       footer.page-footer .inner .logo svg {
         width: 100%;
         height: auto;
-        fill: #690d0d; }
+        fill: #600c0c; }
 
 /**
  * Typography styles
