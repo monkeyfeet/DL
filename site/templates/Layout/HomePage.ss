@@ -18,7 +18,7 @@
 
 		<section class="grid">
 
-			<a href="#" class="item first left" style="background-image: url('site/images/homepage-panel-triune.jpg');">
+			<a href="/about/" class="item first left" style="background-image: url('site/images/homepage-panel-triune.jpg');">
 				<div class="liner">
 					<div class="overlay"></div>
 					<div class="inner">
@@ -27,7 +27,7 @@
 				</div>
 			</a>
 
-			<a href="#" class="item middle left" style="background-image: url('site/images/homepage-panel-book.jpg');">
+			<a href="/the-book/" class="item middle left" style="background-image: url('site/images/homepage-panel-book.jpg');">
 				<div class="liner">
 					<div class="overlay"></div>
 					<div class="inner">
@@ -36,7 +36,7 @@
 				</div>
 			</a>
 
-			<a href="#" class="item last left" style="background-image: url('site/images/homepage-panel-author.jpg');">
+			<a href="/the-book/about-the-author/" class="item last left" style="background-image: url('site/images/homepage-panel-author.jpg');">
 				<div class="liner">
 					<div class="overlay"></div>
 					<div class="inner">
