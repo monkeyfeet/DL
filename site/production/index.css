@@ -1875,6 +1875,14 @@ body, html {
 .clear {
   clear: both; }
 
+.button {
+  padding: 3px 5px;
+  display: inline-block;
+  text-decoration: none;
+  background: #1E1E1E;
+  color: #FFFFFF;
+  margin-right: 5px; }
+
 .col.third {
   width: 33.33333%;
   display: block;
@@ -2150,7 +2158,6 @@ button {
       border-color: #06b8e4; }
 
 button,
-.button,
 input[type="submit"] {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
@@ -2167,7 +2174,6 @@ input[type="submit"] {
   border: 0; }
 
 button:hover,
-.button:hover,
 input[type="submit"]:hover {
   background: #0590b2; }
 
@@ -2443,14 +2449,20 @@ nav.secondarynav .menu {
     .blog section.grid .item .readmore {
       padding: 10px;
       background: #BBBBBB;
-      color: #FFFFFF;
+      color: #1E1E1E;
       font-size: 1rem;
       text-align: right; }
     .blog section.grid .item:hover .readmore {
-      background: #1E1E1E; }
+      background: #1E1E1E;
+      color: #FFFFFF; }
 .blog .pagination {
   text-align: center;
-  margin: 20px 0; }
+  margin-top: 60px; }
+  .blog .pagination span {
+    font-size: 1rem; }
+
+.blog-post .blog-post-meta {
+  font-size: 1rem; }
 
 /**
  * Responsive

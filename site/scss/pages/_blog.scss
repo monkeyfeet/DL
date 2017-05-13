@@ -32,7 +32,7 @@
 				.readmore {
 						padding: 10px;
 						background: $grey;
-						color: $white;
+						color: $black;
 						font-size: 1rem;
 						text-align: right;
 
@@ -41,7 +41,7 @@
 				&:hover {
 					.readmore {
 						background: $black;
-
+						color: $white;
 					}
 				}
 			}
@@ -50,7 +50,22 @@
 
 	.pagination {
 		text-align: center;
-		margin: 20px 0;
+		margin-top: 60px;
+
+		span {
+			font-size: 1rem;
+		}
 	}
 
+}
+
+.blog-post {
+
+	.blog-post-meta {
+		font-size: 1rem;
+
+		.tag {
+
+		}
+	}
 }

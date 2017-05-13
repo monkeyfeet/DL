@@ -30,7 +30,6 @@ button {
 }
 
 button,
-.button,
 input[type="submit"] {
 	@include animate();
 	background: $blue;
@@ -45,7 +44,6 @@ input[type="submit"] {
 }
 
 button:hover,
-.button:hover,
 input[type="submit"]:hover {
 	background: darken($blue, 10%);
 }

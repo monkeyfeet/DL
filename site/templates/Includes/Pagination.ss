@@ -1,22 +1,23 @@
+<% if $MoreThanOnePage %>
+    <p class="pagination">
+        <% if $NotFirstPage %>
+            <a class="prev button red readmore" href="$PrevLink" title="View the previous page">&laquo; Prev</a>
+        <% end_if %>
 
-<% if MoreThanOnePage %>
-    <div class="pagination center clear">
-    
-        <% if NotFirstPage %>
-            <a class="prev button red readmore" href="$PrevLink" title="View the previous page">Prev</a>
-        <% else %>	
-            <span class="prev disabled button">Prev</span>
+        <% loop $PaginationSummary(4) %>
+            <% if $CurrentBool %>
+                <span>$PageNum</span>
+            <% else %>
+                <% if $Link %>
+                    <a class="button" href="$Link">$PageNum</a>
+                <% else %>
+                    <span>...</span>
+                <% end_if %>
+            <% end_if %>
+        <% end_loop %>
+
+        <% if $NotLastPage %>
+            <a class="next button readmore" href="$NextLink" title="View the next page">Next &raquo;</a>
         <% end_if %>
-        <span class="current">
-            Page <input class="pagination-goto" value="$CurrentPage" data-skip-autofocus="true" data-page-length="$PageLength" data-total-pages="$TotalPages" /> of $TotalPages
-        </span>
-        
-        <% if NotLastPage %>
-            <a class="next button red readmore" href="$NextLink" title="View the next page">Next</a>
-        <% else %>	
-            <span class="next disabled button">Next</span>
-        <% end_if %>
-        
-    </div>
-    
+    </p>
 <% end_if %>

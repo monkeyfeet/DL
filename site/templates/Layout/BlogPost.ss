@@ -1,20 +1,26 @@
-<% require themedCSS('blog', 'blog') %>
+<section class="page blog-post cf">
 
-<div class="blog-entry content-container <% if $SideBarView %>unit size3of4<% end_if %>">
-	<article>
-		<h1>$Title</h1>
+	<div class="inner">
 
-		<% if $FeaturedImage %>
-			<p class="post-image">$FeaturedImage.setWidth(795)</p>
-		<% end_if %>
+		<div class="main typography col has-sidebar">
+			<article>
+				<header>
+					<h1>$Title</h1>
+					<% include EntryMeta %>
+				</header>
 
-		<div class="content">$Content</div>
+				<% if $FeaturedImage %>
+					<p class="post-image">$FeaturedImage.setWidth(795)</p>
+				<% end_if %>
+				$Content
+				$Form
+				
+			</article>
 
-		<% include EntryMeta %>
-	</article>
+		</div>
 
-	$Form
-	$CommentsForm
-</div>
+		<% include BlogSideBar %>
 
-<% include BlogSideBar %>
+	</div>
+
+</section>
