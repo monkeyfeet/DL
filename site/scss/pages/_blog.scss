@@ -1,0 +1,56 @@
+
+/**
+ * BLOG
+ **/
+
+.blog {
+
+	section {
+		&.grid {
+			margin-top: 50px;
+
+			.item {
+				color: $black;
+				background: $light-grey;
+				border: none;
+				@include grid( 3, 2% );
+				text-decoration: none;
+
+				.liner {
+					padding: 10px 20px 30px;
+
+					h3 {
+						font-size: 1.5rem;
+					}
+
+					p {
+						font-size: 1rem;
+					}
+					
+				}
+
+				.readmore {
+						padding: 10px;
+						background: $grey;
+						color: $white;
+						font-size: 1rem;
+						text-align: right;
+
+					}
+
+				&:hover {
+					.readmore {
+						background: $black;
+
+					}
+				}
+			}
+		}
+	}
+
+	.pagination {
+		text-align: center;
+		margin: 20px 0;
+	}
+
+}

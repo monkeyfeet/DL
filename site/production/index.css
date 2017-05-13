@@ -1917,7 +1917,7 @@ body, html {
  **/
 .page-header {
   padding: 20px 0;
-  text-align: right; }
+  /*text-align: right;*/ }
   .page-header .inner {
     /*max-width: 100%;
     padding: 0 20px;*/ }
@@ -2086,9 +2086,9 @@ h3 {
 
 h4 {
   font-family: 'Droid Serif', serif;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   padding: 0.5rem 0;
-  font-weight: 400; }
+  font-weight: 700; }
 
 /**
  * Body copy
@@ -2194,7 +2194,7 @@ input[type="submit"]:hover {
  **/
 nav.mainnav {
   background: #770f0f;
-  text-align: center;
+  text-align: right;
   padding-top: 5px;
   position: relative; }
   nav.mainnav li {
@@ -2402,6 +2402,55 @@ nav.secondarynav .menu {
           text-align: center; }
     .homepage section.grid .item:hover .overlay {
       opacity: 0.75; }
+
+/**
+ * BLOG
+ **/
+.blog section.grid {
+  margin-top: 50px; }
+  .blog section.grid .item {
+    color: #1E1E1E;
+    background: #EEEEEE;
+    border: none;
+    width: 30.66667%;
+    box-sizing: border-box;
+    margin: 0 2%;
+    text-decoration: none; }
+    .blog section.grid .item:nth-of-type(n), .blog section.grid .item:nth-of-type(1n+1) {
+      margin: 0 2%;
+      clear: none; }
+    .blog section.grid .item:nth-of-type(3n+1) {
+      margin-left: 0;
+      margin-top: 4%;
+      clear: both; }
+    .blog section.grid .item:first-of-type {
+      margin-left: 0;
+      margin-top: 0; }
+    .blog section.grid .item:nth-of-type(3n) {
+      margin-right: 0;
+      margin-bottom: 4%;
+      position: relative; }
+      .blog section.grid .item:nth-of-type(3n):after {
+        clear: both; }
+    .blog section.grid .item:last-of-type {
+      margin-bottom: 0; }
+    .blog section.grid .item .liner {
+      padding: 10px 20px 30px; }
+      .blog section.grid .item .liner h3 {
+        font-size: 1.5rem; }
+      .blog section.grid .item .liner p {
+        font-size: 1rem; }
+    .blog section.grid .item .readmore {
+      padding: 10px;
+      background: #BBBBBB;
+      color: #FFFFFF;
+      font-size: 1rem;
+      text-align: right; }
+    .blog section.grid .item:hover .readmore {
+      background: #1E1E1E; }
+.blog .pagination {
+  text-align: center;
+  margin: 20px 0; }
 
 /**
  * Responsive
@@ -2630,9 +2679,11 @@ nav.secondarynav .menu {
       clear: none; }
     .homepage section.grid .item:nth-of-type(3n+1) {
       margin-left: 0;
+      margin-top: 4%;
       clear: both; }
     .homepage section.grid .item:first-of-type {
-      margin-left: 0; }
+      margin-left: 0;
+      margin-top: 0; }
     .homepage section.grid .item:nth-of-type(3n) {
       margin-right: 0;
       margin-bottom: 4%;
