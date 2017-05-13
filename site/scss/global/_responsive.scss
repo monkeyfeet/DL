@@ -10,6 +10,17 @@
 	.inner {
 		padding: 0 20px;
 	}
+
+	.excerpt {
+		.inner {
+			margin: 20px 20px 0 20px;
+		}
+	}
+	.page-footer {
+		.logo {
+			right: 20px !important;
+		}
+	}
 }
 
 @media all and (max-width: 800px) {
