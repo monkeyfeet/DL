@@ -1840,7 +1840,11 @@
  **/
 body, html {
   position: relative;
-  height: 100%; }
+  height: 100%;
+  background: #770f0f; }
+
+body {
+  overflow-x: hidden; }
 
 .main.has-sidebar {
   width: 66.66667%;
@@ -1928,6 +1932,7 @@ body, html {
  * Page header
  **/
 .page-header {
+  background: #FFFFFF;
   padding: 20px 0;
   /*text-align: right;*/ }
   .page-header .inner {
@@ -1955,7 +1960,8 @@ body, html {
  * Page
  **/
 .page {
-  margin: 50px 0; }
+  background: #FFFFFF;
+  padding: 50px 0; }
   .page .typography img {
     max-width: 100%;
     height: auto; }
@@ -2419,12 +2425,11 @@ nav.secondarynav h4 {
  * BLOG
  **/
 .blog section.grid {
-  margin-top: 50px; }
+  margin-top: 20px; }
   .blog section.grid .item {
     color: #1E1E1E;
     background: #EEEEEE;
     border: none;
-    padding: 0;
     width: 30.66667%;
     box-sizing: border-box;
     margin: 0 2%;
@@ -2544,11 +2549,11 @@ nav.secondarynav h4 {
       margin-bottom: 0; } }
 @media all and (max-width: 700px) {
   .main.has-sidebar {
-    width: 50%;
+    width: 100%;
     display: block;
     float: left;
     box-sizing: border-box;
-    padding: 0 20px; }
+    padding: 0 0px; }
     .main.has-sidebar:first-of-type {
       padding-left: 0; }
     .main.has-sidebar:last-of-type {
@@ -2559,11 +2564,11 @@ nav.secondarynav h4 {
         display: block; }
 
   .sidebar {
-    width: 50%;
+    width: 100%;
     display: block;
     float: left;
     box-sizing: border-box;
-    padding: 0 20px; }
+    padding: 0 0px; }
     .sidebar:first-of-type {
       padding-left: 0; }
     .sidebar:last-of-type {
@@ -2615,36 +2620,6 @@ nav.secondarynav h4 {
     padding: 0 20px;
     font-size: 1.3rem; } }
 @media all and (max-width: 600px) {
-  .main.has-sidebar {
-    width: 100%;
-    display: block;
-    float: left;
-    box-sizing: border-box;
-    padding: 0 0px; }
-    .main.has-sidebar:first-of-type {
-      padding-left: 0; }
-    .main.has-sidebar:last-of-type {
-      padding-right: 0; }
-      .main.has-sidebar:last-of-type::after {
-        content: '';
-        clear: both;
-        display: block; }
-
-  .sidebar {
-    width: 100%;
-    display: block;
-    float: left;
-    box-sizing: border-box;
-    padding: 0 0px; }
-    .sidebar:first-of-type {
-      padding-left: 0; }
-    .sidebar:last-of-type {
-      padding-right: 0; }
-      .sidebar:last-of-type::after {
-        content: '';
-        clear: both;
-        display: block; }
-
   .page-header {
     padding: 20px 60px 20px 0;
     text-align: left;
@@ -2655,7 +2630,7 @@ nav.secondarynav h4 {
     display: block; }
 
   nav.mainnav {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     top: 0;

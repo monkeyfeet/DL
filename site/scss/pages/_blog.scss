@@ -7,13 +7,12 @@
 
 	section {
 		&.grid {
-			margin-top: 50px;
+			margin-top: 20px;
 
 			.item {
 				color: $black;
 				background: $light-grey;
 				border: none;
-				padding: 0;
 				@include grid( 3, 2% );
 				text-decoration: none;
 

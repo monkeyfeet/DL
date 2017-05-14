@@ -105,13 +105,13 @@
 
 	.main {
 		&.has-sidebar {
-			@include col(1,2,20px);
+			@include col(1,1,0px);
 		}
 		
 	}
 
 	.sidebar {
-		@include col(1,2,20px);
+		@include col(1,1,0px);
 	}
 
 	.page-header {
@@ -170,17 +170,6 @@
 
 @media all and (max-width: 600px) {
 
-	.main {
-		&.has-sidebar {
-			@include col(1,1,0px);
-		}
-		
-	}
-
-	.sidebar {
-		@include col(1,1,0px);
-	}
-
 	.page-header {
 		padding: 20px 60px 20px 0;
 		text-align: left;
@@ -194,7 +183,7 @@
 
 	nav {
 		&.mainnav {
-			position: absolute;
+			position: fixed;
 			width: 100%;
 			height: 100%;
 			top: 0;

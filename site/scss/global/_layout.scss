@@ -6,6 +6,11 @@
 body, html {
 	position: relative;
 	height: 100%;
+	background: $red;
+}
+
+body {
+	overflow-x: hidden;
 }
 
 .main {
@@ -82,6 +87,7 @@ hr {
  **/
 
 .page-header {
+	background: $white;
 	padding: 20px 0;
 	/*text-align: right;*/
 
@@ -123,7 +129,8 @@ hr {
  * Page
  **/
 .page {
-	margin: 50px 0;
+	background: $white;
+	padding: 50px 0;
 
 	.typography {
 		img {
