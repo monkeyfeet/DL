@@ -1967,7 +1967,8 @@ body {
     height: auto; }
 
 .excerpt {
-  border-top: 1px solid #BBBBBB; }
+  border-top: 1px solid #BBBBBB;
+  background: #FFFFFF; }
   .excerpt .inner {
     max-width: 850px;
     padding: 0 50px;
