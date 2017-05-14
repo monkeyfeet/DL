@@ -1981,7 +1981,7 @@ body {
       line-height: 1.5em !important;
       font-style: italic;
       text-align: center;
-      padding: 0 100px; }
+      padding: 0 100px 10px; }
     .excerpt .inner .dots {
       position: absolute;
       top: 50%;
@@ -2618,7 +2618,7 @@ nav.secondarynav h4 {
     font-size: 1.2rem; }
 
   .excerpt .inner p {
-    padding: 0 20px;
+    padding: 0 20px 10px;
     font-size: 1.3rem; } }
 @media all and (max-width: 600px) {
   .page-header {
@@ -2753,7 +2753,7 @@ nav.secondarynav h4 {
   .excerpt .inner {
     padding: 0; }
     .excerpt .inner p {
-      padding: 0;
+      padding: 0 0 10px;
       font-size: 1.2rem; }
     .excerpt .inner .dots {
       display: none; } }
