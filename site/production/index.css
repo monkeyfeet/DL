@@ -1876,12 +1876,16 @@ body, html {
   clear: both; }
 
 .button {
-  padding: 3px 5px;
+  font-size: 0.8rem;
+  padding: 2px 3px;
   display: inline-block;
   text-decoration: none;
-  background: #1E1E1E;
-  color: #FFFFFF;
+  background: #BBBBBB;
+  color: #1E1E1E;
   margin-right: 5px; }
+  .button:not(.no-hover):hover {
+    background: #1E1E1E;
+    color: #FFFFFF; }
 
 .col.third {
   width: 33.33333%;
@@ -2264,6 +2268,8 @@ nav.secondarynav .menu {
       padding-top: 10px; }
     nav.secondarynav .menu li.last {
       padding-bottom: 20px; }
+nav.secondarynav h4 {
+  text-align: right; }
 
 .hamburglar {
   display: none;
@@ -2441,7 +2447,7 @@ nav.secondarynav .menu {
     .blog section.grid .item:last-of-type {
       margin-bottom: 0; }
     .blog section.grid .item .liner {
-      padding: 10px 20px 30px; }
+      padding: 10px 20px; }
       .blog section.grid .item .liner h3 {
         font-size: 1.5rem; }
       .blog section.grid .item .liner p {

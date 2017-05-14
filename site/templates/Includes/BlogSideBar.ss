@@ -1,17 +1,18 @@
 <div class="typography col sidebar">
 
-	<% if $Categories.exists %>
+	<% if $Parent.Categories.exists %>
 
 		<nav class="secondarynav">
+			<h4>View by category</h4>
 			<ul class="menu inner">
-				<li class="menu-item top">
-					<a class="section $FirstLast" href="$Level(1).Link">$Level(1).MenuTitle</a>
-				</li>
-				<% loop $Categories %>
-					<li class="menu-item grey-bg $FirstLast">
-						<a class="$LinkingMode $FirstLast" href="$Link">$Title</a>
+				<% loop $Parent.Categories %>
+					<li class="menu-item grey-bg<% if First %> first<% end_if %>">
+						<a class="$LinkingMode" href="$Link">$Title</a>
 					</li>
 				<% end_loop %>
+				<li class="menu-item grey-bg last">
+					<a class="" href="$Parent.Link">All categories</a>
+				</li>
 			</ul>
 		</nav>
 

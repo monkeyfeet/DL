@@ -5,8 +5,10 @@
 		<div class="main typography col">
 			<article>
 				<header>
-					<h1>
-						<% if $ArchiveYear %>
+					<h1>$Title</h1>
+
+					<% if $ArchiveYear %>
+						<h2>
 							<%t Blog.Archive 'Archive' %>:
 							<% if $ArchiveDay %>
 								$ArchiveDate.Nice
@@ -15,14 +17,20 @@
 							<% else %>
 								$ArchiveDate.format('Y')
 							<% end_if %>
-						<% else_if $CurrentTag %>
-							<%t Blog.Tag 'Tag' %>: $CurrentTag.Title
-						<% else_if $CurrentCategory %>
-							<%t Blog.Category 'Category' %>: $CurrentCategory.Title
-						<% else %>
-							$Title
+						</h2>
+					<% else_if $CurrentTag %>
+						<h2><%t Blog.Tag 'Tag' %>: $CurrentTag.Title</h2>
+					<% else_if $CurrentCategory %>
+						<h2><%t Blog.Category 'Category' %>: $CurrentCategory.Title</h2>
+					<% else %>
+						<% if $Categories.exists %>
+							<span>View by category</span>
+							<% loop $Categories %>
+								<a class="tag button" href="$Link" title="$Title">$Title</a>
+							<% end_loop %>
 						<% end_if %>
-					</h1>
+					<% end_if %>
+					
 				</header>
 
 				$Content

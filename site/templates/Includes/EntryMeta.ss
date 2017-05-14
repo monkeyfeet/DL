@@ -1,6 +1,6 @@
 <p class="blog-post-meta">
 	<% if $Categories.exists %>
-		<%t Blog.PostedIn "Posted in" %>
+		Categories: 
 		<% loop $Categories %>
 			<a class="tag button" href="$Link" title="$Title">$Title</a>
 		<% end_loop %>

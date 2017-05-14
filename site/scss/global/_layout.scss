@@ -40,15 +40,21 @@ hr {
 }
 
 .button {
-	padding: 3px 5px;
+	font-size: 0.8rem;
+	padding: 2px 3px;
 	display: inline-block;
 	text-decoration: none;
-	background: $black;
-	color: $white;
+	background: $grey;
+	color: $black;
 	margin-right: 5px;
-	&:hover {
-		
+
+	&:not(.no-hover) {
+		&:hover {
+			background: $black;
+			color: $white;
+		}
 	}
+	
 }
 
 .col {
