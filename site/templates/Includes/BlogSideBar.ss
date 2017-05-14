@@ -3,7 +3,7 @@
 	<% if $Parent.Categories.exists %>
 
 		<nav class="secondarynav">
-			<h4>View by category</h4>
+			<h4>View articles by category</h4>
 			<ul class="menu inner">
 				<% loop $Parent.Categories %>
 					<li class="menu-item grey-bg<% if First %> first<% end_if %>">
