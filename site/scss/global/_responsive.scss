@@ -11,6 +11,19 @@
 		padding: 0 20px;
 	}
 
+	.blog {
+
+		section {
+			&.grid {
+				.item {
+					.inner {
+						padding: 0;
+					}
+				}
+			}
+		}
+	}
+
 	.excerpt {
 		.inner {
 			margin: 20px 20px 0 20px;
@@ -74,6 +87,20 @@
 	}*/
 }
 
+@media all and (max-width: 750px) {
+
+	.blog {
+
+		section {
+			&.grid {
+				.item {
+					@include grid( 2, 2% );
+				}
+			}
+		}
+	}
+}
+
 @media all and (max-width: 700px) {
 
 	.main {
@@ -127,6 +154,18 @@
 		}
 
 	}
+
+	.excerpt {
+
+		.inner {
+
+			p {
+				padding: 0 20px;
+				font-size: 1.3rem;
+			}
+		}
+
+	}
 }
 
 @media all and (max-width: 600px) {
@@ -147,13 +186,6 @@
 		text-align: left;
 		border-bottom: 9px solid $red;
 	}
-
-	/*.col {
-		width: 100% !important;
-		padding-left: 0 !important;
-		padding-right: 0 !important;
-		float: none !important;
-	}*/
 	
 	/* navigation */
 	.hamburglar {
@@ -225,14 +257,6 @@
 			}
 		}
 	}
-
-	/*section {
-		&.grid {
-			.item {
-				@include grid( $cols: 1, $col_gap: 2%);
-			}
-		}
-	}*/
 	
 }
 
@@ -255,6 +279,16 @@
 
 
 @media all and (max-width: 550px) {
+
+
+
+	h1 {
+		font-size: 2rem;
+	}
+
+	.typography p, .typography li {
+		font-size: 1.1rem;
+	}
 
 	.homepage {
 
@@ -287,6 +321,83 @@
 
 					&.last {
 						margin-left: 3%;
+
+					}
+
+					h3 {
+						font-size: 1.5rem;
+					}
+				}
+			}
+		}
+	}
+
+	.blog {
+
+		section {
+			&.grid {
+				.item {
+					@include grid( 1, 2% );
+				}
+			}
+		}
+	}
+
+	.excerpt {
+
+		.inner {
+			padding: 0;
+			p {
+				padding: 0;
+				font-size: 1.2rem;
+			}
+			.dots {
+				display: none;
+			}
+		}
+
+	}
+	
+}
+
+@media all and (max-width: 460px) {
+
+	.page-header {
+
+		.logo {
+			width: 55px;
+			margin-right: 10px;
+		}
+
+		h1 {
+			font-size: 2rem;
+			
+		}
+
+		h2 {
+			clear: left;
+			font-size: 1.3rem;
+		}
+	}
+
+	.homepage {
+
+		section {
+			&.grid {
+
+				.item {
+					&.first,,
+					&.middle,
+					&.last {
+						width: 100%;
+						margin: 0 0 20px;
+						.liner {
+							padding-bottom: 55%;
+							.inner {
+								padding-top: 25%;
+								
+							}
+						}
 
 					}
 

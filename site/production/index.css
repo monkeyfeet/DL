@@ -1970,7 +1970,7 @@ body, html {
     .excerpt .inner p {
       font-family: 'Droid Serif', serif;
       color: #770f0f;
-      font-size: 1.5rem !important;
+      font-size: 1.5rem;
       line-height: 1.5em !important;
       font-style: italic;
       text-align: center;
@@ -2424,6 +2424,7 @@ nav.secondarynav h4 {
     color: #1E1E1E;
     background: #EEEEEE;
     border: none;
+    padding: 0;
     width: 30.66667%;
     box-sizing: border-box;
     margin: 0 2%;
@@ -2477,6 +2478,9 @@ nav.secondarynav h4 {
   .inner {
     padding: 0 20px; }
 
+  .blog section.grid .item .inner {
+    padding: 0; }
+
   .excerpt .inner {
     margin: 20px 20px 0 20px; }
 
@@ -2515,6 +2519,29 @@ nav.secondarynav h4 {
   		}
   	}
   }*/ }
+@media all and (max-width: 750px) {
+  .blog section.grid .item {
+    width: 48%;
+    box-sizing: border-box;
+    margin: 0 2%; }
+    .blog section.grid .item:nth-of-type(n), .blog section.grid .item:nth-of-type(1n+1) {
+      margin: 0 2%;
+      clear: none; }
+    .blog section.grid .item:nth-of-type(2n+1) {
+      margin-left: 0;
+      margin-top: 4%;
+      clear: both; }
+    .blog section.grid .item:first-of-type {
+      margin-left: 0;
+      margin-top: 0; }
+    .blog section.grid .item:nth-of-type(2n) {
+      margin-right: 0;
+      margin-bottom: 4%;
+      position: relative; }
+      .blog section.grid .item:nth-of-type(2n):after {
+        clear: both; }
+    .blog section.grid .item:last-of-type {
+      margin-bottom: 0; } }
 @media all and (max-width: 700px) {
   .main.has-sidebar {
     width: 50%;
@@ -2582,7 +2609,11 @@ nav.secondarynav h4 {
         clear: both;
         display: block; }
   .homepage section.grid .item h3 {
-    font-size: 1.2rem; } }
+    font-size: 1.2rem; }
+
+  .excerpt .inner p {
+    padding: 0 20px;
+    font-size: 1.3rem; } }
 @media all and (max-width: 600px) {
   .main.has-sidebar {
     width: 100%;
@@ -2619,12 +2650,6 @@ nav.secondarynav h4 {
     text-align: left;
     border-bottom: 9px solid #770f0f; }
 
-  /*.col {
-  	width: 100% !important;
-  	padding-left: 0 !important;
-  	padding-right: 0 !important;
-  	float: none !important;
-  }*/
   /* navigation */
   .hamburglar {
     display: block; }
@@ -2678,15 +2703,7 @@ nav.secondarynav h4 {
       section .row .col:last-of-type::after {
         content: '';
         clear: both;
-        display: block; }
-
-  /*section {
-  	&.grid {
-  		.item {
-  			@include grid( $cols: 1, $col_gap: 2%);
-  		}
-  	}
-  }*/ }
+        display: block; } }
 @media all and (min-width: 551px) {
   .homepage section.grid .item {
     width: 30.66667%;
@@ -2711,6 +2728,12 @@ nav.secondarynav h4 {
     .homepage section.grid .item:last-of-type {
       margin-bottom: 0; } }
 @media all and (max-width: 550px) {
+  h1 {
+    font-size: 2rem; }
+
+  .typography p, .typography li {
+    font-size: 1.1rem; }
+
   .homepage section.grid .item.first {
     width: 100%;
     margin-bottom: 20px; }
@@ -2724,6 +2747,56 @@ nav.secondarynav h4 {
     margin-right: 3%; }
   .homepage section.grid .item.last {
     margin-left: 3%; }
+  .homepage section.grid .item h3 {
+    font-size: 1.5rem; }
+
+  .blog section.grid .item {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 2%; }
+    .blog section.grid .item:nth-of-type(n), .blog section.grid .item:nth-of-type(1n+1) {
+      margin: 0 2%;
+      clear: none; }
+    .blog section.grid .item:nth-of-type(1n+1) {
+      margin-left: 0;
+      margin-top: 4%;
+      clear: both; }
+    .blog section.grid .item:first-of-type {
+      margin-left: 0;
+      margin-top: 0; }
+    .blog section.grid .item:nth-of-type(1n) {
+      margin-right: 0;
+      margin-bottom: 4%;
+      position: relative; }
+      .blog section.grid .item:nth-of-type(1n):after {
+        clear: both; }
+    .blog section.grid .item:last-of-type {
+      margin-bottom: 0; }
+
+  .excerpt .inner {
+    padding: 0; }
+    .excerpt .inner p {
+      padding: 0;
+      font-size: 1.2rem; }
+    .excerpt .inner .dots {
+      display: none; } }
+@media all and (max-width: 460px) {
+  .page-header .logo {
+    width: 55px;
+    margin-right: 10px; }
+  .page-header h1 {
+    font-size: 2rem; }
+  .page-header h2 {
+    clear: left;
+    font-size: 1.3rem; }
+
+  .homepage section.grid .item.first, .homepage section.grid .item.middle, .homepage section.grid .item.last {
+    width: 100%;
+    margin: 0 0 20px; }
+    .homepage section.grid .item.first .liner, .homepage section.grid .item.middle .liner, .homepage section.grid .item.last .liner {
+      padding-bottom: 55%; }
+      .homepage section.grid .item.first .liner .inner, .homepage section.grid .item.middle .liner .inner, .homepage section.grid .item.last .liner .inner {
+        padding-top: 25%; }
   .homepage section.grid .item h3 {
     font-size: 1.5rem; } }
 
