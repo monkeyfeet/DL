@@ -48,7 +48,7 @@ class Page_Controller extends ContentController {
 			Requirements::css('site/production/index.css');
 		}
 
-		Requirements::css("https://fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i");
+		Requirements::css("https://fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i|Open+Sans:400,400i,700,700i");
 	}
 
 	function RandomExcerpt(){
