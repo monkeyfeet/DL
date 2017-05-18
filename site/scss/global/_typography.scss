@@ -10,7 +10,6 @@
 body,
 html {
 	font-family: 'Open Sans', serif;
-	/*font-family: 'Droid Serif', serif;*/
 	font-size: 14px;
 	color: $black;
 	
@@ -26,7 +25,6 @@ h1 {
 	line-height: 1em;
 	margin-bottom: 1rem;
 	font-weight: 400;
-	/*font-family: 'Crimson Text', serif;*/
 	font-family: 'Droid Serif', serif;
 	text-transform: uppercase;
 }
@@ -36,7 +34,6 @@ h2 {
 	line-height: 1em;
 	margin-bottom: 0.5rem;
 	font-weight: 400;
-	/*font-family: 'Crimson Text', serif;*/
 	font-family: 'Droid Serif', serif;
 	font-style: italic;
 }
@@ -86,6 +83,16 @@ h4 {
 	ul,
 	ol{
 		padding-left: 24px;
+	}
+
+	blockquote {
+		padding: 20px;
+		background: $light_grey;
+		margin: 10px 0 20px;
+
+		p, li {
+			font-size: 1rem;
+		}
 	}
 }
 
