@@ -2482,8 +2482,14 @@ nav.secondarynav h4 {
 .blog .tag {
   margin-bottom: 7px; }
 
+.blog-post header {
+  border-bottom: 1px solid #EEEEEE;
+  margin-bottom: 20px; }
 .blog-post .blog-post-meta {
-  font-size: 1rem; }
+  font-size: 1rem;
+  border-top: 1px solid #EEEEEE;
+  margin-top: 20px;
+  padding-top: 20px; }
 
 /**
  * Responsive

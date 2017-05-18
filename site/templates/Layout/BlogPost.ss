@@ -6,7 +6,6 @@
 			<article>
 				<header>
 					<h1>$Title</h1>
-					<% include EntryMeta %>
 				</header>
 
 				<% if $FeaturedImage %>
@@ -14,6 +13,8 @@
 				<% end_if %>
 				$Content
 				$Form
+
+				<% include EntryMeta %>
 				
 			</article>
 

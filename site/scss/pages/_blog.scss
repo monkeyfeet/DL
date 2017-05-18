@@ -65,9 +65,15 @@
 
 .blog-post {
 
+	header {
+		border-bottom: 1px solid $light_grey;
+		margin-bottom: 20px;
+	}
+
 	.blog-post-meta {
 		font-size: 1rem;
-
-
+		border-top: 1px solid $light_grey;
+		margin-top: 20px;
+		padding-top: 20px;
 	}
 }
