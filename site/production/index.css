@@ -2279,7 +2279,8 @@ nav.secondarynav .menu {
     nav.secondarynav .menu li.last {
       padding-bottom: 20px; }
     nav.secondarynav .menu li.label {
-      padding-bottom: 20px; }
+      padding-bottom: 20px;
+      font-size: 1rem; }
 nav.secondarynav h4 {
   text-align: right; }
 
