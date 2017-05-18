@@ -3,10 +3,15 @@
 	<% if $Parent.Categories.exists %>
 
 		<nav class="secondarynav">
-			<h4>View articles by category</h4>
 			<ul class="menu inner">
+				<li class="menu-item top">
+					<a class="section $FirstLast" href="$Parent.Link">$Parent.MenuTitle</a>
+				</li>
+				<li class="menu-item grey-bg label first">
+					View articles by category
+				</li>
 				<% loop $Parent.Categories %>
-					<li class="menu-item grey-bg<% if First %> first<% end_if %>">
+					<li class="menu-item grey-bg">
 						<a class="$LinkingMode" href="$Link">$Title</a>
 					</li>
 				<% end_loop %>
