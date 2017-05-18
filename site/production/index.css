@@ -2083,7 +2083,7 @@ h1 {
   line-height: 1em;
   margin-bottom: 1rem;
   font-weight: 400;
-  font-family: 'Droid Serif', serif;
+  font-family: "Droid Serif", serif;
   text-transform: uppercase; }
 
 h2 {
@@ -2091,17 +2091,17 @@ h2 {
   line-height: 1em;
   margin-bottom: 0.5rem;
   font-weight: 400;
-  font-family: 'Droid Serif', serif;
+  font-family: "Droid Serif", serif;
   font-style: italic; }
 
 h3 {
-  font-family: 'Droid Serif', serif;
+  font-family: "Droid Serif", serif;
   font-size: 1.8rem;
   padding: 0.5rem 0;
   font-weight: 400; }
 
 h4 {
-  font-family: 'Droid Serif', serif;
+  font-family: "Droid Serif", serif;
   font-size: 1.3rem;
   padding: 0.5rem 0;
   font-weight: 700; }
@@ -2476,6 +2476,8 @@ nav.secondarynav h4 {
   margin-top: 60px; }
   .blog .pagination span {
     font-size: 1rem; }
+.blog .tag {
+  margin-bottom: 7px; }
 
 .blog-post .blog-post-meta {
   font-size: 1rem; }

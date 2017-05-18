@@ -24,7 +24,7 @@
 						<h2><%t Blog.Category 'Category' %>: $CurrentCategory.Title</h2>
 					<% else %>
 						<% if $Categories.exists %>
-							<span>View by category</span>
+							<h4>View by category</h4>
 							<% loop $Categories %>
 								<a class="tag button" href="$Link" title="$Title">$Title</a>
 							<% end_loop %>
