@@ -1962,9 +1962,11 @@ body {
 .page {
   background: #FFFFFF;
   padding: 50px 0; }
-  .page .typography img {
-    max-width: 100%;
-    height: auto; }
+  .page .typography article {
+    padding-bottom: 20px; }
+    .page .typography article img {
+      max-width: 100%;
+      height: auto; }
 
 .excerpt {
   border-top: 1px solid #BBBBBB;
