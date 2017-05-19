@@ -2179,7 +2179,7 @@ input[type="submit"] {
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  background: #06b8e4;
+  background: #1E1E1E;
   color: #FFFFFF;
   cursor: hand;
   cursor: pointer;
@@ -2191,7 +2191,7 @@ input[type="submit"] {
 
 button:hover,
 input[type="submit"]:hover {
-  background: #0590b2; }
+  background: #050505; }
 
 ::-webkit-input-placeholder {
   color: rgba(0, 0, 0, 0.25); }
@@ -2374,6 +2374,8 @@ nav.secondarynav h4 {
       border: 0; }
       .security-page form #ForgotPassword a:hover {
         background: #a2a2a2; }
+  .security-page form #MemberLoginForm_LoginForm_Remember_Holder label {
+    float: none !important; }
 
 /**
  * Page-specific
