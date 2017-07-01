@@ -7,6 +7,8 @@ i18n::set_locale('en_US');
 
 // Extensions
 DataObject::add_extension('SiteConfig', 'SiteConfigExtension');
+DataObject::add_extension('Blog', 'BlogExtension');
+DataObject::add_extension('BlogCategory', 'BlogCategoryExtension');
 
 // specify log files
 $path = BASE_PATH.'/../logs';
