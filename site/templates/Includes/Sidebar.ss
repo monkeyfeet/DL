@@ -17,11 +17,24 @@
 
 	<% end_if %>
 
+	<%--
+
 	<a class="buy-button white-text" href="#">
 		<div class="liner">
 			<h3>Buy the book</h3>
 			<span class="">Purchase on Amazon now</span>
 		</div>
 	</a>
+
+	--%>
+
+	<div class="buy-button white-text" href="#">
+		<div class="liner">
+			<p>Winner of the</p>
+			<span>Ashton Wylie Charitable Trust</span>
+			<h3>Literary Awards 2017</h3>
+			<span class="">Unpublished Manuscript Category</span>
+		</div>
+	</div>
 
 </div>

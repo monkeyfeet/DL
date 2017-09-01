@@ -2037,11 +2037,14 @@ body {
     background: #1E1E1E; }
     .sidebar .buy-button .liner {
       padding: 20px; }
-      .sidebar .buy-button .liner span {
-        color: #BBBBBB; }
-    .sidebar .buy-button:hover {
+      .sidebar .buy-button .liner span,
+      .sidebar .buy-button .liner p {
+        color: #BBBBBB;
+        display: block; }
+    .sidebar .buy-buttona:hover {
       background: #2b2b2b; }
-      .sidebar .buy-button:hover span {
+      .sidebar .buy-buttona:hover span,
+      .sidebar .buy-buttona:hover p {
         color: #FFFFFF; }
 
 footer.page-footer {

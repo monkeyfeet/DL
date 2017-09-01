@@ -228,14 +228,17 @@ hr {
 		.liner {
 			padding: 20px;
 
-			span {
+			span,
+			p {
 				color: $grey;
+				display: block;
 			}
 		}
 
-		&:hover {
+		&a:hover {
 			background: lighten($black, 5%);
-			span {
+			span,
+			p {
 				color: $white;
 			}
 		}

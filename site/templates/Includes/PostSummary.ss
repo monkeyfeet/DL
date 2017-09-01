@@ -1,4 +1,4 @@
-<a href="$Link" class="item blog-post $FirstLast left" title="Read more about '{title}'...">
+<a href="$Link" class="item blog-post $FirstLast left" title="Read more about '{$Title}'...">
 
 	<div class="liner">
 
