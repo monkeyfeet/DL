@@ -1,0 +1,16 @@
+{
+	"name": "plasticstudio/sitemap",
+    "type": "silverstripe-module",
+	"description": "Sitemap generating module for SilverStripe",
+	"keywords": ["silverstripe"],
+	"require": {
+		"silverstripe/cms": "~3.1",
+		"silverstripe/framework": "~3.1"
+	},
+    "extra": {
+        "installer-paths": {
+            "{$name}": ["vendor/package"]
+        }
+    },
+	"minimum-stability": "dev"
+}
