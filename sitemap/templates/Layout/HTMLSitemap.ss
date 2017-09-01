@@ -9,7 +9,7 @@
 				<% if not ExcludeFromSitemap %>
 					<li>
 						<a href="$Link" title="{$Title}">$MenuTitle.XML</a>
-						<% if Children %>
+						<% if AllChildren %>
 							<% include SitemapNextLevel %>
 						<% end_if %>
 					</li>

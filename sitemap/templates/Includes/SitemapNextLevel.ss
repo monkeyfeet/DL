@@ -1,6 +1,6 @@
-<% if Children %>
+<% if AllChildren %>
 <ul>
-	<% loop Children %>
+	<% loop AllChildren %>
 		<% if not ExcludeFromSitemap %>
 			<li>
 				<a href="$Link" title="{$Title}">$MenuTitle.XML</a>
