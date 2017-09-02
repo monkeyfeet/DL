@@ -181,29 +181,35 @@
 	// reset previously defined margins (at higher breakpoints)
 	&:nth-of-type(n),
 	&:nth-of-type(1n+1) {
-		margin: 0 $col_gap;
+		margin: $row_gap $col_gap 0;
 		clear: none;
-		// &:after{clear: none;}
+	}
+
+	@for $i from 1 through $cols {
+
+		&:nth-of-type(#{$i}){
+			margin-top: 0;
+		}
+
 	}
 
 	// first of row
 	&:nth-of-type(#{$cols}n+1) {
+		//margin-top: $row_gap;
 		margin-left: 0;
-		margin-top: $row_gap;
 		clear: both;
 	}
 
 	// handle first of row if there are less than $col
 	&:first-of-type {
+		//margin-top: 0;
 		margin-left: 0;
-		margin-top: 0;
 	}
 
 
 	// last of row
 	&:nth-of-type(#{$cols}n) {
 		margin-right: 0;
-		margin-bottom: $row_gap;
 		position: relative;
 		&:after{
 			clear: both;
