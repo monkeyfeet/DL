@@ -9,13 +9,12 @@ sitemap.xml
 /betterbuttons/
 /blog/
 /cms/
+/dev-tools/
 /framework/
 /gridfieldextensions/
 /lumberjack/
 /reports/
-/segment-field/
 /siteconfig/
 /sortablegridfield/
 /tagfield/
-/userforms/
 # END of GitIgnoreEditor
