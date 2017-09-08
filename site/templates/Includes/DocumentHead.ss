@@ -9,14 +9,14 @@
 	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scaleable=no" name="viewport" />
 	
 	<meta property="og:type" content="website">
-	<meta property="og:url" content="{$BaseHref}{$Link}?1" />
+	<meta property="og:url" content="{$absoluteBaseURL}{$Link}?1" />
 	<meta property="og:title" content="$Title" />
 	<meta property="og:description" content="$MetaDescription" />
     
 	<% if OgImage %>
 		<meta property="og:image" content="$OgImage.AbsoluteURL" />
     <% else %>
-		<meta property="og:image" content="/site/images/logo.png" />
+		<meta property="og:image" content="{$absoluteBaseURL}site/images/logo.png" />
 	<% end_if %>
 	
 	<link rel="shortcut icon" type="image/ico" href="/site/favicon.ico" />
