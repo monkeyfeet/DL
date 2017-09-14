@@ -22,12 +22,16 @@
 						<h2><%t Blog.Tag 'Tag' %>: $CurrentTag.Title</h2>
 					<% else_if $CurrentCategory %>
 						<h2><%t Blog.Category 'Category' %>: $CurrentCategory.Title</h2>
-					<% else %>
-						<% if $Categories.exists %>
-							<% loop $Categories %>
-								<a class="tag button" href="$Link" title="$Title">$Title</a>
-							<% end_loop %>
-						<% end_if %>
+					<% end_if %>
+
+					<% if $Categories.exists %>
+						<% loop $Categories %>
+							<% if LinkingMode == 'current' %>
+								<span class="tag button $LinkingMode">$Title</span>
+							<% else %>
+								<a class="tag button $LinkingMode" href="$Link" title="$Title">$Title</a>
+							<% end_if %>
+						<% end_loop %>
 					<% end_if %>
 					
 				</header>

@@ -23,4 +23,21 @@ class BlogCategoryExtension extends DataExtension {
 	 * @var string
 	 */
 	private static $default_sort = 'Sort ASC';
+
+	function LinkingMode(){
+		
+		// get params
+		$params = Controller::curr()->request->params();
+		
+		// if we're viewing this category, it's current
+		if(isset($params['Action']) && $params['Action'] == 'category'){
+			if(isset($params['ID']) && $params['ID'] == $this->owner->URLSegment){
+				return 'current';
+			}
+		}
+		
+		// default to link
+		return 'link';
+		
+	}
 }

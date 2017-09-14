@@ -59,6 +59,11 @@ hr {
 			color: $white;
 		}
 	}
+
+	&.current {
+		background: $black;
+		color: $white;
+	}
 	
 }
 

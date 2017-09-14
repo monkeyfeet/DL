@@ -1890,6 +1890,9 @@ body {
   .button:not(.no-hover):hover {
     background: #1E1E1E;
     color: #FFFFFF; }
+  .button.current {
+    background: #1E1E1E;
+    color: #FFFFFF; }
 
 .col.third {
   width: 33.33333%;
