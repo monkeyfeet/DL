@@ -7,27 +7,17 @@
 				<header>
 					<h1>$Title</h1>
 
-					<% if $ArchiveYear %>
-						<h2>
-							<%t Blog.Archive 'Archive' %>:
-							<% if $ArchiveDay %>
-								$ArchiveDate.Nice
-							<% else_if $ArchiveMonth %>
-								$ArchiveDate.format('F, Y')
+
+
+					<% if $Categories.exists %>
+						<% loop $Categories %>
+							<% if LinkingMode == 'current' %>
+								<span class="tag button $LinkingMode">$Title</span>
 							<% else %>
-								$ArchiveDate.format('Y')
+								<a class="tag button $LinkingMode" href="$Link" title="$Title">$Title</a>
 							<% end_if %>
-						</h2>
-					<% else_if $CurrentTag %>
-						<h2><%t Blog.Tag 'Tag' %>: $CurrentTag.Title</h2>
-					<% else_if $CurrentCategory %>
-						<h2><%t Blog.Category 'Category' %>: $CurrentCategory.Title</h2>
-					<% else %>
-						<% if $Categories.exists %>
-							<% loop $Categories %>
-								<a class="tag button" href="$Link" title="$Title">$Title</a>
-							<% end_loop %>
-						<% end_if %>
+						<% end_loop %>
+						<a class="tag button $CategoriesLinkingMode" href="$Link" title="All Categories">All Categories</a>
 					<% end_if %>
 					
 				</header>

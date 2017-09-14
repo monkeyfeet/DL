@@ -22,6 +22,8 @@
 	<link rel="shortcut icon" type="image/ico" href="/site/favicon.ico" />
 	<link rel="shortcut icon" type="image/x-icon" href="/site/favicon.ico" />
 	<link rel="shortcut-icon" href="/site/favicon.ico" />
+
+	<link rel="canonical" href="https://divinelaziness.com{$Link}"/>
 	
 	<% include GoogleAnalytics %>
 	

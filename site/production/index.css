@@ -1890,6 +1890,9 @@ body {
   .button:not(.no-hover):hover {
     background: #1E1E1E;
     color: #FFFFFF; }
+  .button.current {
+    background: #1E1E1E;
+    color: #FFFFFF; }
 
 .col.third {
   width: 33.33333%;
@@ -2154,11 +2157,9 @@ h4 {
 .italic-text {
   font-style: italic; }
 
-/*
---- CLIENT
---- Editor stylesheet
---- By James Barnsley
-*/
+/**
+ * FORMS
+ **/
 input,
 select,
 textarea,
@@ -2207,6 +2208,26 @@ input[type="submit"]:hover {
 
 :-ms-input-placeholder {
   color: rgba(0, 0, 0, 0.25); }
+
+/* CONTACT FORM */
+form.contact-form {
+  margin: 0 auto;
+  max-width: 500px;
+  border: 0;
+  padding: 30px;
+  background: #EEEEEE; }
+  form.contact-form .field.text label, form.contact-form .field.textarea label {
+    text-transform: uppercase;
+    padding-bottom: 4px; }
+    form.contact-form .field.text label.left, form.contact-form .field.textarea label.left {
+      float: none; }
+  form.contact-form .field.text input,
+  form.contact-form .field.text textarea, form.contact-form .field.textarea input,
+  form.contact-form .field.textarea textarea {
+    width: 100%; }
+  form.contact-form .Actions {
+    padding-top: 10px;
+    text-align: center; }
 
 /**
  * Self-contained components
