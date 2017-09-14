@@ -10,6 +10,23 @@ class BlogExtension extends DataExtension {
 		}
 	}
 
+	function CategoriesLinkingMode(){
+		
+		// get params
+		$params = Controller::curr()->request->params();
+		
+		// if we're viewing a category, the base is not "current"
+		if(isset($params['Action']) && $params['Action'] == 'category'){
+			if(isset($params['ID'])){
+				return 'link';
+			}
+		}
+		
+		// default to current
+		return 'current';
+		
+	}
+
 }
 
 class BlogCategoryExtension extends DataExtension {
