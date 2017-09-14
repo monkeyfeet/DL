@@ -1,33 +1,4 @@
 <?php
-/*class FormSubmission extends DataObject {	
-		
-	static private $db = array(
-		'FormData' => 'Text',
-		'Name' => 'Varchar(255)',
-		'Email' => 'Varchar(255)'
-	);
-		
-	static private $has_one = array(
-		'Page' => 'Page'
-	);
-	
-	static $summary_fields = array(
-		'Created' => 'Date',
-		'Name' => 'Name',
-		'Email' => 'Email'
-	);
-	
-	static $default_sort = 'Created DESC';
-	
-	public static $searchable_fields = array(
-		'Created',
-		'Name',
-		'Email'
-	);
-}*/
-
-
-
 class FormSubmission extends DataObject {
 	
 	private static $singular_name = 'Form submission';
@@ -102,7 +73,7 @@ class FormSubmission extends DataObject {
 		if( $config->SendEmailsFrom_Name && $config->SendEmailsFrom_Email ){
 			$from = '"'.$config->SendEmailsFrom_Name.'" <'.$config->SendEmailsFrom_Email.'>';
 		}else{
-			$from = 'DEFAULT <noreply@default.co.nz>';
+			$from = 'Divine Laziness <noreply@divinelaziness.com>';
 		}
 
 		// define time var to use in template
