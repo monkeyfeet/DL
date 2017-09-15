@@ -86,13 +86,13 @@ class FormSubmission extends DataObject {
 
 			case 'ContactPage':
 				// --- ADMIN EMAIL ---
-				if( isset($this->Origin()->AdminEmail) ){
-					$to = $this->Origin()->AdminEmail;
+				if( isset($this->Origin()->ToEmail) ){
+					$to = $this->Origin()->ToEmail;
 				}else{
 					$to = $config->SendEmailsTo_Email;
 				}
 				$subject = $config->Title . ' Website contact form submission';
-				$data->Title = $data->Name . ' has made an enquiry.';
+				$data->Title = $data->Name . ' has made an enquiry through the contact form on divinelaziness.com';
 				$data->URL = Director::absoluteBaseURL();
 				$data->Data = ArrayList::create(array(
 					ArrayData::create(array(
@@ -119,12 +119,12 @@ class FormSubmission extends DataObject {
 				$email->send();
 
 				// --- CUSTOMER EMAIL ---
-				$to = '"'.$data->Name.'" <'.$data->Email.'>';
-				$data->Title = 'Thanks for your message, we\'ll be in touch soon. The details you submitted are included below for your own records.';
-				$email = Email::create($from, $to, $subject, $body);
-				$email->setTemplate('Emails/FormSubmission');
-				$email->populateTemplate( ArrayData::create($data) );
-				$email->send();
+				// $to = '"'.$data->Name.'" <'.$data->Email.'>';
+				// $data->Title = 'Thanks for your message, we\'ll be in touch soon. The details you submitted are included below for your own records.';
+				// $email = Email::create($from, $to, $subject, $body);
+				// $email->setTemplate('Emails/FormSubmission');
+				// $email->populateTemplate( ArrayData::create($data) );
+				// $email->send();
 
 				break;
 
