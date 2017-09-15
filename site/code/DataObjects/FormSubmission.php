@@ -92,7 +92,7 @@ class FormSubmission extends DataObject {
 					$to = $config->SendEmailsTo_Email;
 				}
 				$subject = $config->Title . ' Website contact form submission';
-				$data->Title = $data->Name . ' has made an enquiry.';
+				$data->Title = $data->Name . ' has made an enquiry through the contact form on divinelaziness.com';
 				$data->URL = Director::absoluteBaseURL();
 				$data->Data = ArrayList::create(array(
 					ArrayData::create(array(

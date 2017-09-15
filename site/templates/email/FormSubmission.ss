@@ -5,7 +5,7 @@
 		
 			<div style="border-top: 30px solid #FFFFFF; text-align: center;">
 				<a href="{$AbsoluteDomain}" style="border: 0; text-decoration: none;">
-					<img src="{$AbsoluteDomain}site/images/email-logo.gif" title="IMPAC logo" />
+					<img src="{$AbsoluteDomain}site/images/logo-75.png" title="Divine Laziness logo" />
 				</a>
 			</div>
 			
