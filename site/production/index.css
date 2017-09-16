@@ -2052,7 +2052,7 @@ body {
 
 footer.page-footer {
   background: #770f0f;
-  color: #FFFFFF;
+  color: #600c0c;
   padding: 50px 0 20px;
   text-align: right; }
   footer.page-footer .inner {
@@ -2211,8 +2211,6 @@ input[type="submit"]:hover {
 
 /* CONTACT FORM */
 form.contact-form {
-  margin: 0 auto;
-  max-width: 500px;
   border: 0;
   padding: 30px;
   background: #EEEEEE; }
