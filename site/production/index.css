@@ -2037,7 +2037,8 @@ body {
   .sidebar .buy-button {
     display: block;
     text-align: center;
-    background: #1E1E1E; }
+    background: #1E1E1E;
+    margin-bottom: 20px; }
     .sidebar .buy-button .liner {
       padding: 20px; }
       .sidebar .buy-button .liner span,
