@@ -6,15 +6,7 @@
 
 			<div class="main col has-sidebar">
 				$Content
-
-				
-
-				<a class="buy-button red-bg white-text" href="#">
-					<div class="liner">
-						<h3>Buy the book</h3>
-						<span class="white-text">Purchase on Amazon now</span>
-					</div>
-				</a>
+				$Form
 			</div>
 
 			<div class="typography col sidebar">
