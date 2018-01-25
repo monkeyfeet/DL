@@ -6,9 +6,21 @@
 
 			<div class="main col has-sidebar">
 				$Content
+				$Form
 			</div>
 
-			<% include Sidebar %>
+			<div class="typography col sidebar">
+
+				<div class="buy-button white-text">
+					<div class="liner">
+						<p>Winner of the</p>
+						<span>Ashton Wylie Charitable Trust</span>
+						<h3>Literary Awards 2017</h3>
+						<span class="">Unpublished Manuscript Category</span>
+					</div>
+				</div>
+
+			</div>
 
 			<hr class="clear"/>
 
