@@ -14,3 +14,5 @@ DataObject::add_extension('BlogCategory', 'BlogCategoryExtension');
 $path = BASE_PATH.'/../logs';
 SS_Log::add_writer(new SS_LogFileWriter($path.'/info.log'), SS_Log::WARN, '<=');
 SS_Log::add_writer(new SS_LogFileWriter($path.'/errors.log'), SS_Log::ERR);
+
+// some commented stiuff
