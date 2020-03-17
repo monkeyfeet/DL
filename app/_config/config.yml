@@ -1,0 +1,19 @@
+---
+Name: divinelaziness
+---
+SilverStripe\Core\Manifest\ModuleManifest:
+  project: app
+SilverStripe\SiteConfig\SiteConfig:
+  extensions:
+    - SiteConfigExtension
+SilverStripe\Blog\Model\Blog:
+  extensions:
+    - BlogExtension
+SilverStripe\Blog\Model\BlogCategory:
+  extensions:
+    - BlogCategoryExtension
+SilverStripe\Forms\HTMLEditor\TinyMCEConfig:
+  editor_css:
+    - 'app/production/editor.css'
+Jaedb\IconField\IconField:
+  icons_directory: /app/images/icons/
