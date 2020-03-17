@@ -1,5 +1,5 @@
 {
-    "name": "divinelaziness",
+    "name": "monkeyfeet/divinelaziness",
     "description": "Divine Laziness website.",
     "require": {
         "silverstripe/recipe-plugin": "^1.3",
