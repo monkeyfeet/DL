@@ -9,6 +9,7 @@ use SilverStripe\Forms\HiddenField;
 use SilverStripe\Control\Email\Email;
 use SilverStripe\Forms\TextareaField;
 use SilverStripe\Forms\RequiredFields;
+use SilverStripe\ORM\FieldType\DBHTMLText;
 
 class ContactPageController extends PageController { 
 
@@ -27,7 +28,7 @@ class ContactPageController extends PageController {
 		
 		if($params['Action'] == 'submitted'){
 		
-			return $this->OnCompletionMessage;
+			return DBHTMLText::create()->setValue($this->OnCompletionMessage);
 			
 		}else{
 	
