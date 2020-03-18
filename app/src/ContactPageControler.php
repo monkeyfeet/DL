@@ -70,7 +70,7 @@ class ContactPageController extends PageController {
 	
 	/***
 	* Send email
-	***/
+	**
 	function EmailAdmin($submission){
 	
 		if( !empty($this->FromName) ){
@@ -91,6 +91,6 @@ class ContactPageController extends PageController {
     	$email->setData($submission);
     	$email->send();
 		
-	}
+	}*/
 	
 }

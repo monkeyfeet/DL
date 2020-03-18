@@ -66,10 +66,10 @@ class FormSubmission extends DataObject {
 	}
 
 	public function OriginType(){
-		return false;
 		if( $this->OriginClass ) return $this->OriginClass;
 		if( $this->OriginID <= 0 ) return '-';
-		return $this->Origin()->ClassName;
+		if(isset($this->Origin()->ClassName)) return $this->Origin()->ClassName;
+		return false;
 	}
 
 
