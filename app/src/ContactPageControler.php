@@ -80,21 +80,15 @@ class ContactPageController extends PageController {
 			$FromName = $this->SiteConfig()->Title.' contact form';
 		}
 
-		$from = $FromName . ' <' . $this->FromEmail . '>';
+		$from = $this->FromEmail;
 		$to = $this->ToEmail;
 		//$to = Email::setAdminEmail();
 		$subject = 'A new submission has been received from '.$FromName;
 		$body = '';
 		
-		$email = new Email($from, $to, $subject, $body);
-		
-		//set template
-    	$email->setTemplate('AdminEmail');
-		
-    	//populate template
-    	$email->populateTemplate($submission);
-		
-    	//send mail
+		$email = Email::create($from, $to, $subject, $body);
+    	$email->setHTMLTemplate('Email\\Email');
+    	$email->setData($submission);
     	$email->send();
 		
 	}

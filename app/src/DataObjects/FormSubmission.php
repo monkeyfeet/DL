@@ -66,6 +66,7 @@ class FormSubmission extends DataObject {
 	}
 
 	public function OriginType(){
+		return false;
 		if( $this->OriginClass ) return $this->OriginClass;
 		if( $this->OriginID <= 0 ) return '-';
 		return $this->Origin()->ClassName;
@@ -82,10 +83,10 @@ class FormSubmission extends DataObject {
 
 		// set up email "from" vars
 		$config = SiteConfig::current_site_config(); 
-		if( $config->SendEmailsFrom_Name && $config->SendEmailsFrom_Email ){
-			$from = '"'.$config->SendEmailsFrom_Name.'" <'.$config->SendEmailsFrom_Email.'>';
+		if(isset($config->SendEmailsFrom_Email)){
+			$from = $config->SendEmailsFrom_Email;
 		}else{
-			$from = 'Divine Laziness <noreply@divinelaziness.com>';
+			$from = 'noreply@divinelaziness.nz';
 		}
 
 		// define time var to use in template
@@ -125,9 +126,9 @@ class FormSubmission extends DataObject {
 					))
 				));
 				$email = Email::create($from, $to, $subject, $body);
-				$email->replyTo($data->Email);
-				$email->setTemplate('Emails/FormSubmission');
-				$email->populateTemplate( ArrayData::create($data) );
+				$email->setReplyTo($data->Email);
+				$email->setHTMLTemplate('Email/FormSubmission');
+				$email->setData( ArrayData::create($data) );
 				$email->send();
 
 				// --- CUSTOMER EMAIL ---
@@ -147,17 +148,17 @@ class FormSubmission extends DataObject {
 				$subject = $config->Title . ' Website form submission';
 				$data->Title = $data->Name . ' sent you a message through the website.';
 				$email = Email::create($from, $to, $subject, $body);
-				$email->replyTo($data->Email);
-				$email->setTemplate('Emails/FormSubmission');
-				$email->populateTemplate( ArrayData::create($data) );
+				$email->setReplyTo($data->Email);
+				$email->setHTMLTemplate('Email/FormSubmission');
+				$email->setData( ArrayData::create($data) );
 				$email->send();
 
 				// --- CUSTOMER EMAIL ---
 				$to = '"'.$data->Name.'" <'.$data->Email.'>';
 				$data->Title = 'Thanks for your message, we\'ll be in touch soon. The details you submitted are included below for your own records.';
 				$email = Email::create($from, $to, $subject, $body);
-				$email->setTemplate('Emails/FormSubmission');
-				$email->populateTemplate( ArrayData::create($data) );
+				$email->setHTMLTemplate('Email/FormSubmission');
+				$email->setData( ArrayData::create($data) );
 				$email->send();
 		}
 
