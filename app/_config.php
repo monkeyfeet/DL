@@ -2,6 +2,7 @@
 
 use SilverStripe\i18n\i18n;
 use SilverStripe\ORM\DataObject;
+use SilverStripe\Control\Director;
 
 require_once('conf/ConfigureFromEnv.php');
 
@@ -12,6 +13,10 @@ i18n::set_locale('en_US');
 DataObject::add_extension('SiteConfig', 'SiteConfigExtension');
 DataObject::add_extension('Blog', 'BlogExtension');
 DataObject::add_extension('BlogCategory', 'BlogCategoryExtension');
+
+if(Director::isLive()){
+    Director::forceSSL();
+}
 
 // specify log files
 // $path = BASE_PATH.'/../logs';
