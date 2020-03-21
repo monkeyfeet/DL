@@ -35,7 +35,6 @@ class ContactPageController extends PageController {
 			$fields = new FieldList(
 				new TextField('Name', 'Name'),
 				new EmailField('Email', 'Email'),
-				//new TextField('Phone', 'Phone'),
 				new TextareaField('Message', 'Message'),
 				new HiddenField('ContactPageID', null, $this->ID)
 			);
@@ -66,7 +65,7 @@ class ContactPageController extends PageController {
 		$Submission->write();
 		$Submission->SendEmails();
 		
-        $this->redirect($this->Link().'submitted');
+        $this->redirect($this->Link('submitted'));
     }
 	
 	/***
