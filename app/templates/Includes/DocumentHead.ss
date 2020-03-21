@@ -2,7 +2,6 @@
 <html lang="en" class="<% if URLSegment == 'Security' %>security-page<% end_if %>">
 <head>
 
-	<% base_tag %>
 	<meta charset="utf-8">
 	<title>$MenuTitle.XML | $SiteConfig.Title</title>
 	
@@ -16,12 +15,12 @@
 	<% if OgImage %>
 		<meta property="og:image" content="$OgImage.AbsoluteURL" />
     <% else %>
-		<meta property="og:image" content="{$absoluteBaseURL}site/images/logo.png" />
+		<meta property="og:image" content="{$absoluteBaseURL}app/images/logo.png" />
 	<% end_if %>
 	
-	<link rel="shortcut icon" type="image/ico" href="/site/favicon.ico" />
-	<link rel="shortcut icon" type="image/x-icon" href="/site/favicon.ico" />
-	<link rel="shortcut-icon" href="/site/favicon.ico" />
+	<link rel="shortcut icon" type="image/ico" href="/app/favicon.ico" />
+	<link rel="shortcut icon" type="image/x-icon" href="/app/favicon.ico" />
+	<link rel="shortcut-icon" href="/app/favicon.ico" />
 
 	<link rel="canonical" href="https://divinelaziness.com{$Link}"/>
 	
