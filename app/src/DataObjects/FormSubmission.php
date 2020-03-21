@@ -69,7 +69,7 @@ class FormSubmission extends DataObject {
 		if( $this->OriginClass ) return $this->OriginClass;
 		if( $this->OriginID <= 0 ) return '-';
 		if(isset($this->Origin()->ClassName)) return $this->Origin()->ClassName;
-		return false;
+		return 'ContactPage';
 	}
 
 
@@ -128,7 +128,7 @@ class FormSubmission extends DataObject {
 				
 				// --- ADMIN EMAIL ---
 				$to = 'jerecole@gmail.com';
-				$subject = $config->Title . ' Website form submission';
+				$subject = 'Divine Laziness Website form submission';
 				$data->Title = $data->Name . ' sent you a message through the website.';
 				$email = Email::create($from, $to, $subject, $body);
 				$email->setReplyTo($data->Email);
@@ -137,12 +137,12 @@ class FormSubmission extends DataObject {
 				$email->send();
 
 				// --- CUSTOMER EMAIL ---
-				$to = '"'.$data->Name.'" <'.$data->Email.'>';
-				$data->Title = 'Thanks for your message, we\'ll be in touch soon. The details you submitted are included below for your own records.';
-				$email = Email::create($from, $to, $subject, $body);
-				$email->setHTMLTemplate('Email/FormSubmission');
-				$email->setData( ArrayData::create($data) );
-				$email->send();
+				// $to = $data->Email;
+				// $data->Title = 'Thanks for your message, we\'ll be in touch soon. The details you submitted are included below for your own records.';
+				// $email = Email::create($from, $to, $subject, $body);
+				// $email->setHTMLTemplate('Email/FormSubmission');
+				// $email->setData( ArrayData::create($data) );
+				// $email->send();
 		}
 
 		return;
