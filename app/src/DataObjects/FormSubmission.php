@@ -32,7 +32,7 @@ class FormSubmission extends DataObject {
 	private static $summary_fields = [
 		'Created' => 'Created',
 		'URL' => 'URL',
-		'OriginType' => 'Origin',
+		//'OriginType' => 'Origin',
 		'IPAddress' => 'IP Address',
 		'UniqueID' => 'UniqueID'
 	];
@@ -77,19 +77,10 @@ class FormSubmission extends DataObject {
 	 * Send emails responding to this submission
 	 **/
 	public function SendEmails(){
+		$config = SiteConfig::current_site_config();
 
-		// convert payload to array for template
 		$data = json_decode($this->Payload);
-
-		// set up email "from" vars
-		$config = SiteConfig::current_site_config(); 
-		if(isset($config->SendEmailsFrom_Email)){
-			$from = $config->SendEmailsFrom_Email;
-		}else{
-			$from = 'noreply@divinelaziness.nz';
-		}
-
-		// define time var to use in template
+		$from = 'noreply@divinelaziness.nz';
 		$body = '';
 		$data->TimeSent = date('Y-m-d H:i:s');
 		$data->UniqueID = $this->UniqueID;
@@ -102,7 +93,7 @@ class FormSubmission extends DataObject {
 				if( isset($this->Origin()->ToEmail) ){
 					$to = $this->Origin()->ToEmail;
 				}else{
-					$to = $config->SendEmailsTo_Email;
+					$to = 'jerecole@gmail.com';
 				}
 				$subject = $config->Title . ' Website contact form submission';
 				$data->Title = $data->Name . ' has made an enquiry through the contact form on divinelaziness.com';
@@ -131,20 +122,12 @@ class FormSubmission extends DataObject {
 				$email->setData( ArrayData::create($data) );
 				$email->send();
 
-				// --- CUSTOMER EMAIL ---
-				// $to = '"'.$data->Name.'" <'.$data->Email.'>';
-				// $data->Title = 'Thanks for your message, we\'ll be in touch soon. The details you submitted are included below for your own records.';
-				// $email = Email::create($from, $to, $subject, $body);
-				// $email->setTemplate('Emails/FormSubmission');
-				// $email->populateTemplate( ArrayData::create($data) );
-				// $email->send();
-
 				break;
 
 			default:
 				
 				// --- ADMIN EMAIL ---
-				$to = $config->SendEmailsTo_Email;
+				$to = 'jerecole@gmail.com';
 				$subject = $config->Title . ' Website form submission';
 				$data->Title = $data->Name . ' sent you a message through the website.';
 				$email = Email::create($from, $to, $subject, $body);
