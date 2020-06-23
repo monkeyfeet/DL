@@ -5,7 +5,7 @@
 		
 			<div style="border-top: 30px solid #FFFFFF; text-align: center;">
 				<a href="{$AbsoluteBaseURL}" style="border: 0; text-decoration: none;">
-					<img src="{$AbsoluteBaseURL}site/images/email-template-logo.png" title="Logo" />
+					<img src="{$AbsoluteBaseURL}app/images/email-template-logo.png" title="Logo" />
 				</a>
 			</div>
 			

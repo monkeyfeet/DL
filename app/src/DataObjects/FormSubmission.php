@@ -91,7 +91,7 @@ class FormSubmission extends DataObject {
 			case 'ContactPage':
 				// --- ADMIN EMAIL ---
 				if( isset($this->Origin()->ToEmail) ){
-					$to = $this->Origin()->ToEmail;
+					$to = explode(',',trim($this->Origin()->ToEmail));
 				}else{
 					$to = 'jerecole@gmail.com';
 				}
@@ -118,7 +118,7 @@ class FormSubmission extends DataObject {
 				));
 				$email = Email::create($from, $to, $subject, $body);
 				$email->setReplyTo($data->Email);
-				$email->setHTMLTemplate('Email/FormSubmission');
+				$email->setHTMLTemplate('email/FormSubmission');
 				$email->setData( ArrayData::create($data) );
 				$email->send();
 
