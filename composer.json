@@ -11,6 +11,8 @@
         "silverstripe/blog": "3.5.0",
         "jaedb/iconfield": "^1",
         "plasticstudio/sitemap": "^2",
+        "silverstripe/spamprotection": "3.0.2",
+        "silverstripe/recaptcha": "3.0.x-dev",
         "gdmedia/ss-auto-git-ignore": "1.0.2"
     },
     "prefer-stable": true,

@@ -1,0 +1,8 @@
+---
+name: mycustomspamprotection
+---
+SilverStripe\SpamProtection\Extension\FormSpamProtectionExtension:
+    default_spam_protector: SilverStripe\Recaptcha\RecaptchaProtector
+SilverStripe\Recaptcha\RecaptchaField:
+    public_api_key: "6LcdQKgZAAAAABelG2Yg2Sfe5bwRrW7rZ1MPyvWQ"
+    private_api_key: "6LcdQKgZAAAAAOWL2fWB73mkxXjt0gfjre-TZAzY"

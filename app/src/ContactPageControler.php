@@ -47,6 +47,7 @@ class ContactPageController extends PageController {
 			$validator = new RequiredFields('Name', 'Email', 'Message');
 			
 			$form = Form::create($this, 'ContactForm', $fields, $actions, $validator)->addExtraClass('contact-form');
+			$form->enableSpamProtection();
 			
 			return $form;
 
