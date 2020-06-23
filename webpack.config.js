@@ -30,16 +30,6 @@ module.exports = (env, argv) => {
 					use: 'expose-loader?jQuery!expose?$'
 				},
 				{
-					test: /\.js$/,
-					exclude: [
-						/(node_modules|bower_components)/
-					],
-					loader: 'babel-loader',
-					query: {
-						presets: ['@babel/preset-env']
-					}
-				},
-				{
 					test: /\.scss$/,
 					use: [
 						MiniCssExtractPlugin.loader,
